@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ねずみさん家。の日常</title>
+    <link>https://nezumisannn.github.io/</link>
+    <description>Recent content on ねずみさん家。の日常</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nezumisannn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ブログを開設しました！</title>
+      <link>https://nezumisannn.github.io/blog/first-post/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nezumisannn.github.io/blog/first-post/</guid>
+      <description>みなさんこんにちは！
+インフラエンジニアのねずみさん家です。
+突然ですがブログを開設しました。ねずみさん家。の日常です(笑)
+このブログは「Hugo」と「Github Peges」で稼働しています。
+WordPressが最初に頭に思い浮かびましたが
+コンテンツとして自己紹介とブログ記事しかない小規模なサイトなので
+「別に動的コンテンツじゃなくてもいいじゃん！」ということで勢いで作りました（
+このブログで書くこと  学習したスキル 技術的に躓いたこと 勉強会・セミナーの参加レポート プライベートの日常  などなど、私自身が書きたいことを徐々に書いていきたいと思います！
+Twitterで記事を随時宣伝していくつもりなので気になった方は是非ご覧ください！
+ブログを開設した訳 唐突に何故ブログを開設したのかをまとめておくと
+「所属企業とは別で、個人としてのアウトプットを行っていきたい」と思ったからです。
+各個人で意見は異なると思いますが、私自身が仕事をする上で
+「どの企業に属しているか」よりも「個人としてどんなスキルを持っていて何が出来るのか」
+ということの方が重視されていると強く感じています。
+「学歴とか過去の経歴」が当てにならない時代になってきているのではないでしょうか。
+そんな中で、「自分という個人」を売り込み市場価値を上げるにはどうすれば良いのか。
+そう考えたときに行き着いたのが「考えやスキルをブログでアウトプットする」ということでした。
+思ったより単純明快ですね(笑)
+併せて、これは以前から既に実践しているのですが
+ブログ以外の活動として「勉強会やセミナーに登壇する」ということも続けています。
+登壇履歴はこちらから見れます！
+https://github.com/nezumisannn/my-profile
+ 勉強会やセミナーに登壇してアウトプットをすることで人脈を広げる 個人ブログで文章として発信する  この2点を今後継続することでアウトプットの頻度を上げていきたいと思います！</description>
+    </item>
+    
+  </channel>
+</rss>
