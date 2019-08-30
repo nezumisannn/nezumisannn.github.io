@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ねずみさん家。の日常</title>
-    <link>https://nezumisannn.github.io/</link>
+    <link>https://nezumisannn.io/</link>
     <description>Recent content on ねずみさん家。の日常</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nezumisannn.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nezumisannn.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ブログを開設しました！</title>
-      <link>https://nezumisannn.github.io/blog/first-post/</link>
+      <link>https://nezumisannn.io/blog/first-post/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nezumisannn.github.io/blog/first-post/</guid>
+      <guid>https://nezumisannn.io/blog/first-post/</guid>
       <description>みなさんこんにちは！
 インフラエンジニアのねずみさん家です。
 突然ですがブログを開設しました。ねずみさん家。の日常です(笑)
