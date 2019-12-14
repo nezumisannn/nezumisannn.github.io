@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform on ねずみさん家。の日常</title>
+    <link>https://nezumisannn.io/categories/terraform/</link>
+    <description>Recent content in Terraform on ねずみさん家。の日常</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nezumisannn.io/categories/terraform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TerraformのModuleを作成する(VPC)</title>
+      <link>https://nezumisannn.io/blog/terraform-module-vpc/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nezumisannn.io/blog/terraform-module-vpc/</guid>
+      <description>みなさんこんにちは！
+インフラエンジニアのねずみさん家です。
+今回はTerraformのModuleを作成してAWSのVPCを作成します。
+初めての投稿なので初回セットアップの部分も書いてみたいと思います。
+Terraformは非常に便利なツールなので是非利用してみてくださいー。
+Terraformのインストール Macを利用していてbrewが利用できる方は以下でインストール可能です。
+brew install terraform  TerraformはGolangで開発されているため
+こちらからバイナリファイルをダウンロードすることも可能です。
+インストールできたらバージョンを確認してみましょう。
+terraform version  今回はバージョン0.12.18を利用します。
+古いバージョンの0.11ではサポートされていない記述も含まれているためご注意ください。
+クレデンシャルの用意 Terraformの処理でAWSのAPIを実行することになるためクレデンシャルを用意します。
+用意したらTerraformから読み込むために環境変数に登録します。
+変数名の頭にTF_VARとつけることでTerraformから読み込むことができるようになります。
+export TF_VAR_access_key=[Access Key] export TF_VAR_secret_key=[Secret Key] export TF_VAR_role_arn=[Role ARN]  terraform.tfvarsに記載しても良いですが
+Gitに誤って上げてしまって不正アクセスを受けたという記事が散見されるため
+基本的にはファイルに直接認証情報を記載しないのが良いと思います。
+また今回はTerraformからAssumeRoleを行うため
+適切な権限を付与したIAMロールも用意しておきます。
+HCLの記述 ここからHCLを記載していきます。
+HCLはHashicorp Configuration Languageの略で
+Terraformのコードを書いていくときに利用する独自言語を指します。
+今回記載したVPCのモジュールの階層構造は以下のようになっています。
+. ├── network │ └── vpc │ ├── main.tf │ ├── outputs.tf │ └── variables.tf ├── network.tf ├── outputs.tf ├── provider.tf ├── terraform.tfstate ├── terraform.</description>
+    </item>
+    
+  </channel>
+</rss>

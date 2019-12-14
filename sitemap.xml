@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nezumisannn.io/blog/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nezumisannn.io/categories/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nezumisannn.io/categories/terraform/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nezumisannn.io/blog/terraform-module-vpc/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nezumisannn.io/</loc>
+    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nezumisannn.io/about/</loc>
     <lastmod>2019-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nezumisannn.io/blog/</loc>
-    <lastmod>2019-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nezumisannn.io/categories/</loc>
-    <lastmod>2019-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nezumisannn.io/categories/life/</loc>
-    <lastmod>2019-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nezumisannn.io/</loc>
     <lastmod>2019-08-26T00:00:00+00:00</lastmod>
   </url>
   

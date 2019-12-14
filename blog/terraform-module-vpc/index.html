@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>TerraformのModuleを作成する(VPC) - ねずみさん家。の日常</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.57.2" />
+  <meta itemprop="name" content="TerraformのModuleを作成する(VPC)">
+<meta itemprop="description" content="TerraformでAWSのVPCを作成してみます">
+
+
+<meta itemprop="datePublished" content="2019-12-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-12-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="419">
+
+
+
+<meta itemprop="keywords" content="" />
+
+  <meta property="og:title" content="TerraformのModuleを作成する(VPC)" />
+<meta property="og:description" content="TerraformでAWSのVPCを作成してみます" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nezumisannn.io/blog/terraform-module-vpc/" />
+<meta property="article:published_time" content="2019-12-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-14T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TerraformのModuleを作成する(VPC)"/>
+<meta name="twitter:description" content="TerraformでAWSのVPCを作成してみます"/>
+<meta name="twitter:site" content="@yktr_sre"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About Me</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Terraform%e3%81%aeModule%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%28VPC%29&amp;url=https%3a%2f%2fnezumisannn.io%2fblog%2fterraform-module-vpc%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnezumisannn.io%2fblog%2fterraform-module-vpc%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.png" class="circle" width="" alt="nezumisannn" /></a>
+  <header>
+    <h1>ねずみさん家。の日常</h1>
+  </header>
+  <main>
+    <p>技術的な内容から日常まで。思ったこと感じたことを書いていきます。</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com//nezumisannn" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/yktr_sre" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:yktr.sre@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/terraform-module-vpc/">TerraformのModuleを作成する(VPC)</a></h2>
+    
+    
+        <p>TerraformでAWSのVPCを作成してみます</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2019-12-14 00:00:00 &#43;0000 UTC">
+      December 14, 2019
+    </time>
+    <span class="author">nezumisannn</span>
+    
+      <p>2 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Terraform%e3%81%aeModule%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%28VPC%29&amp;url=https%3a%2f%2fnezumisannn.io%2fblog%2fterraform-module-vpc%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnezumisannn.io%2fblog%2fterraform-module-vpc%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    
+
+<p>みなさんこんにちは！<br />
+インフラエンジニアのねずみさん家です。</p>
+
+<p>今回はTerraformのModuleを作成してAWSのVPCを作成します。<br />
+初めての投稿なので初回セットアップの部分も書いてみたいと思います。<br />
+Terraformは非常に便利なツールなので是非利用してみてくださいー。</p>
+
+<h2 id="terraformのインストール">Terraformのインストール</h2>
+
+<p>Macを利用していてbrewが利用できる方は以下でインストール可能です。</p>
+
+<pre><code>brew install terraform
+</code></pre>
+
+<p>TerraformはGolangで開発されているため<br />
+<a href="https://www.terraform.io/downloads.html">こちらから</a>バイナリファイルをダウンロードすることも可能です。</p>
+
+<p>インストールできたらバージョンを確認してみましょう。</p>
+
+<pre><code>terraform version
+</code></pre>
+
+<p>今回はバージョン0.12.18を利用します。<br />
+古いバージョンの0.11ではサポートされていない記述も含まれているためご注意ください。</p>
+
+<h2 id="クレデンシャルの用意">クレデンシャルの用意</h2>
+
+<p>Terraformの処理でAWSのAPIを実行することになるためクレデンシャルを用意します。<br />
+用意したらTerraformから読み込むために環境変数に登録します。<br />
+変数名の頭にTF_VARとつけることでTerraformから読み込むことができるようになります。</p>
+
+<pre><code>export TF_VAR_access_key=[Access Key]
+export TF_VAR_secret_key=[Secret Key]
+export TF_VAR_role_arn=[Role ARN]
+</code></pre>
+
+<p>terraform.tfvarsに記載しても良いですが<br />
+Gitに誤って上げてしまって不正アクセスを受けたという記事が散見されるため<br />
+基本的にはファイルに直接認証情報を記載しないのが良いと思います。</p>
+
+<p>また今回はTerraformからAssumeRoleを行うため<br />
+適切な権限を付与したIAMロールも用意しておきます。</p>
+
+<h2 id="hclの記述">HCLの記述</h2>
+
+<p>ここからHCLを記載していきます。<br />
+HCLはHashicorp Configuration Languageの略で<br />
+Terraformのコードを書いていくときに利用する独自言語を指します。</p>
+
+<p>今回記載したVPCのモジュールの階層構造は以下のようになっています。</p>
+
+<pre><code>.
+├── network
+│   └── vpc
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── network.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+└── variables.tf
+</code></pre>
+
+<p>tfstateをローカルで管理していますが<br />
+実際に使う場合はbackendでS3などで管理するようにするのが定石です。</p>
+
+<p>まずはprovider.tfを書いていきましょう。</p>
+
+<pre><code>provider &quot;aws&quot; {
+  access_key = var.access_key
+  secret_key = var.secret_key
+  region     = var.region
+
+  assume_role {
+    role_arn = var.role_arn
+  }
+}
+</code></pre>
+
+<p>providerではAWSにアクセスするために必要な認証情報を指定します。<br />
+Terraformではvariableで変数を定義してvar.変数名で変数の値を取得することが可能です。<br />
+variables.tfの中身を見てみましょう。</p>
+
+<pre><code>variable &quot;access_key&quot; {
+  description = &quot;AWS Access Key&quot;
+}
+
+variable &quot;secret_key&quot; {
+  description = &quot;AWS Secret Key&quot;
+}
+
+variable &quot;role_arn&quot; {
+  description = &quot;AWS Role ARN for Assume Role&quot;
+}
+
+variable &quot;region&quot; {
+  description = &quot;AWS Region&quot;
+  default     = &quot;ap-northeast-1&quot;
+}
+</code></pre>
+
+<p>variableで変数を定義しています。<br />
+この変数には先ほど環境変数に指定した値が自動で代入されます。</p>
+
+<p>ここまで書けたらいよいよVPCの作成部分を書いていきましょう。<br />
+network.tfの中身を見てみます。</p>
+
+<pre><code>module &quot;vpc&quot; {
+  source = &quot;./network/vpc&quot;
+  
+  vpc_config = {
+    name                 = &quot;example&quot;
+    cidr_block           = &quot;10.0.0.0/16&quot;
+    enable_dns_support   = true
+    enable_dns_hostnames = true
+  }
+}
+</code></pre>
+
+<p>sourceに読み込むModuleの処理を記載した.tfが存在するディレクトリの相対パスを記載します。<br />
+また、Module側で必要な値を変数化するため<br />
+vpc_configという名前で変数を作成してModule側に渡しています。</p>
+
+<p>Module側を見ていきます、まずはvariables.tfから見ていきましょう。<br />
+ここでnetwork.tfから渡された変数を受け取っています。</p>
+
+<pre><code>variable &quot;vpc_config&quot; {
+  type = object({
+    name                 = string
+    cidr_block           = string
+    enable_dns_support   = bool
+    enable_dns_hostnames = bool
+  })
+}
+</code></pre>
+
+<p>Terraform0.12からobjectという便利なタイプが追加されています。<br />
+0.11まではmap型でも同じ型の値しか格納することができませんでしたが<br />
+objectを利用するとstringとboolといった異なる型の値を同時に扱うことができます。</p>
+
+<p>次にmain.tfを見ていきましょう。<br />
+ここでVPCを作成するためにaws_vpcリソースを記述しています。</p>
+
+<pre><code>resource &quot;aws_vpc&quot; &quot;this&quot; {
+  cidr_block           = var.vpc_config.cidr_block
+  enable_dns_support   = var.vpc_config.enable_dns_support
+  enable_dns_hostnames = var.vpc_config.enable_dns_hostnames
+
+  tags = {
+    Name = var.vpc_config.name
+  }
+}
+</code></pre>
+
+<p>ここでも値が変数化されていますが<br />
+vpc_configという名前で呼び出し側から値を受け取っているため<br />
+var.変数名.オブジェクトキーというように指定すると値を参照することができます。</p>
+
+<p>ここまでくればもう一息です。<br />
+最後にリソースが作成された後の情報を参照できるようにoutputを書いておきましょう。<br />
+outputs.tfを見ていきます。</p>
+
+<pre><code>output &quot;vpc&quot; {
+  value = aws_vpc.this
+}
+</code></pre>
+
+<p>ここも0.12から追加された記述を利用しています。<br />
+0.11までは1つのoutputに対して1つの値しか扱うことができませんでしたが<br />
+0.12からは複数の値を扱うことができるようになります。<br />
+aws_vpc.リソース名とするとvpc_idやcidr_blockなどの複数の値がmap型でまとめて出力されます。</p>
+
+<p>ここまで書いたらVPCを作成することが可能です。
+まずはドライランを実行してみましょう。</p>
+
+<pre><code>terraform plan
+</code></pre>
+
+<p>成功すると以下のように結果が返ってきます。<br />
+エラーが出た場合はHCLに記述ミスがある可能性があるので書き直しましょう。</p>
+
+<pre><code>Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.vpc.aws_vpc.this will be created
+  + resource &quot;aws_vpc&quot; &quot;this&quot; {
+      + arn                              = (known after apply)
+      + assign_generated_ipv6_cidr_block = false
+      + cidr_block                       = &quot;10.0.0.0/16&quot;
+      + default_network_acl_id           = (known after apply)
+      + default_route_table_id           = (known after apply)
+      + default_security_group_id        = (known after apply)
+      + dhcp_options_id                  = (known after apply)
+      + enable_classiclink               = (known after apply)
+      + enable_classiclink_dns_support   = (known after apply)
+      + enable_dns_hostnames             = true
+      + enable_dns_support               = true
+      + id                               = (known after apply)
+      + instance_tenancy                 = &quot;default&quot;
+      + ipv6_association_id              = (known after apply)
+      + ipv6_cidr_block                  = (known after apply)
+</code></pre>
+
+<p>ドライランは問題ないようですので実際に反映してみましょう。</p>
+
+<pre><code>terraform apply
+</code></pre>
+
+<p>反映されたら作成されたVPCの情報を参照したいため<br />
+Module側で指定したoutputを呼び出し側で受け取り内容を確認します。<br />
+呼び出し元のoutputs.tfを確認します。</p>
+
+<pre><code>output &quot;vpc_id&quot; {
+  value = module.vpc.vpc.id
+}
+</code></pre>
+
+<p>ここで記述するのはmodule.モジュール名.参照する値となり<br />
+今回はVPCのIDを確認したいためmodule.vpc.vpc.idとなります。<br />
+記述したら再度terraform applyを実行します。</p>
+
+<pre><code>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+vpc_id = vpc-XXXXXXXXXXXXXXXXX
+</code></pre>
+
+<p>正常に実行されるとこのようにVPCのIDを確認することができます。<br />
+これでVPCのモジュールは完成です。<br />
+作成したリソースが不要になったら以下のコマンドで消してくださいね。</p>
+
+<pre><code>terraform destroy
+</code></pre>
+
+<h2 id="次回">次回</h2>
+
+<p>VPCを作成したので次はサブネットの作成を行います。<br />
+また後日記事にまとめるのでお楽しみにー！</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://nezumisannn.io/categories/terraform">Terraform</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/first-post/" class="button big previous"><i class="fas fa-angle-left"></i> ブログを開設しました！</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/terraform-module-vpc/">TerraformのModuleを作成する(VPC)</a></h1>
+          <time class="published" datetime="">December 14, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/first-post/">ブログを開設しました！</a></h1>
+          <time class="published" datetime="">August 26, 2019</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/life/">life<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/terraform/">terraform<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>大阪在住でインフラエンジニアをやってます。ニックネームはねずみさん家。クラウドチョットデキル。</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com//nezumisannn" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/yktr_sre" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:yktr.sre@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2019
+      
+        ねずみさん家。の日常
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.57.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+<script src='/js/staticman.js'></script>
+  
+
+
+
+    </div>
+  </body>
+</html>
