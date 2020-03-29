@@ -355,7 +355,7 @@ source &quot;docker&quot; &quot;php-fpm&quot; {
 
   provisioner &quot;shell&quot; {
     inline = [
-      &quot;echo it's alive !&quot;
+      &quot;hostname &amp;&amp; cat /etc/os-release&quot;
     ]
   }
 }
