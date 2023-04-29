@@ -1,10 +1,22 @@
 ---
 title: Links
 links:
+  - title: Twitter
+    description: Twitterアカウント
+    website: https://twitter.com/yktr_sre
+    image: twitter_logo.png
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
+    description: GitHubアカウント
     website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+    image: github_logo.png
+  - title: Speaker Deck
+    description: 登壇資料
+    website: https://speakerdeck.com/nezumisannn
+    image:
+  - title: Funny Bunny Team Site
+    description: PSO2NGSのチームサイト(個人製作)
+    website: https://funny-bunny.site/
+    image:
 menu:
     main: 
         weight: 4
@@ -13,21 +25,3 @@ menu:
 
 comments: false
 ---
-
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
