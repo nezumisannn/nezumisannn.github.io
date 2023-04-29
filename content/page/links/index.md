@@ -7,7 +7,7 @@ links:
     image: twitter_logo.png
   - title: GitHub
     description: GitHubアカウント
-    website: https://github.com
+    website: https://github.com/nezumisannn
     image: github_logo.png
   - title: Speaker Deck
     description: 登壇資料
