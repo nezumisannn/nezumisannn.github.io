@@ -112,6 +112,9 @@ resource "my_profile" "nezumisannn" {
 - 2021/11/18
   - MixLeap Study #68 - 各社事例に学ぶKubernetes運用
   - <https://yahoo-osaka.connpass.com/event/228555/>
+- 2023/05/11
+  - 【大阪】AWS構築・開発の技術勉強会【リアル開催】
+  - <https://beyondjapan.connpass.com/event/280427/>
 
 ## メディア掲載
 
@@ -190,4 +193,3 @@ resource "my_profile" "nezumisannn" {
 - 2023/03/07
   - うちの社員をもう一度面接してみた。【新卒採用編】
   - <https://www.youtube.com/watch?v=ULyPRl9Z048>
-  
