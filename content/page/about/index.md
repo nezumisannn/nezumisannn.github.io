@@ -16,7 +16,7 @@ menu:
 resource "my_profile" "nezumisannn" {
   name            = "Yuki.Teraoka"
   nickname        = "ねずみさん家。"
-  job             = "Site Reliability Engineer"
+  job             = "Infra Engineer"
   favorite_skills = ["Terraform","Packer"]
 }
 ```
