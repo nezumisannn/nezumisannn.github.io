@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on ねずみさん家。の日常</title><link>https://nezumisannn.io/blog/</link><description>Recent content in Blogs on ねずみさん家。の日常</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nezumisannn.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>コーチングを通して考える自分と仕事と人生</title><link>https://nezumisannn.io/blog/thinking-myself-work-life-coaching/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/thinking-myself-work-life-coaching/</guid><description>&lt;img src="https://nezumisannn.io/blog/thinking-myself-work-life-coaching/cover.jpg" alt="Featured image of post コーチングを通して考える自分と仕事と人生" />&lt;p>みなさんこんにちは！ &lt;br>
+すっかりブログの間隔が空いてしまいました、ねずみさん家。です。&lt;/p>
+&lt;p>最近コーチングを受け始めました、3/1からなのでもうすぐ2か月というところです。 &lt;br>
+今回は受けようと思ったきっかけと、コーチングを通して考えたことをまとめてみたいと思います。&lt;/p>
+&lt;p>その前にまずはこの場を借りてお礼を。 &lt;br>
+コーチとして&lt;a class="link" href="https://twitter.com/yuukitogawa_3" target="_blank" rel="noopener"
+>&lt;strong>きぃさん&lt;/strong>&lt;/a>にお世話になっています。 &lt;br>
+私の拙い言葉を受け入れて味方でいてくれるとてもお優しい方です。 &lt;br>
+いつもお時間をいただきありがとうございます！今後ともよろしくお願いいたします！ &lt;br>
+私もこの貴重な時間を使って成長できるように頑張ります、結果出します＾＾&lt;/p>
+&lt;h2 id="前置き自分の立ち位置">(前置き)自分の立ち位置
+&lt;/h2>&lt;p>社内外の人材育成を担うチームのリーダーをやっています。 &lt;br>
+サブリーダー1人とメンバー2人がいるので計4人のチームです。 &lt;br>
+サーバの運用保守を行う部署の中のチームとなるのでエンジニアリング + 教育です。&lt;/p>
+&lt;p>私単体としては普段はインフラエンジニアとして仕事をしているので &lt;br>
+AWSを始めたとしたパブリッククラウドを活かしたサーバの設計・構築・運用もやっていますし &lt;br>
+アラートが発生した際のトラブルシューティングもやっています。&lt;/p>
+&lt;p>そこに合わせてチームのミッションが社内外の人材育成になるので &lt;br>
+社内の新人メンバーの受け入れと新人研修や &lt;br>
+既存メンバー向けにスキルアップを行う研修を実施しつつ &lt;br>
+リーダーとしてチームメンバーのサポートをしています。&lt;/p>
+&lt;h2 id="コーチングを受けようと思ったきっかけ">コーチングを受けようと思ったきっかけ
+&lt;/h2>&lt;p>自分の心境、仕事、人生に向き合う時間を作りたいなと思ったのがきっかけです。 &lt;br>
+当時は会社の1つの期が終わる直前で、次期に向けた組織体制の発表から始まり &lt;br>
+自身としても次の1年で何をやっていくかを考えていた時期でした。&lt;/p>
+&lt;p>その中で、今まで私のチームで働いていたメンバーのキャリア選択を見守ることになりました。 &lt;br>
+仕事を通して成長して新たにリーダーとなった人、やりたいことに挑戦するために部署を異動した人 &lt;br>
+そして、引き続きチームで頑張ることを決めてくれた人。 &lt;br>
+皆がそれぞれにとって良い選択をしたと思っています。&lt;/p>
+&lt;p>そこで私自身は嬉し涙と悔し涙の両方を流すことになりました。 &lt;br>
+1つは同じチームで切磋琢磨して成長したことでメンバーの新たなキャリアが生まれたことです。 &lt;br>
+これはメンバー1人1人が辛いことがありながらも努力を続けた結果だと思います。 &lt;br>
+今はそれぞれ進んだ道で頑張っています、その姿を見ると本当に嬉しい気持ちが込み上げてきます。 &lt;br>
+本人達には恥ずかしさもあり言えないですがｗ &lt;br>
+「学んだことを次は自分の周りの人に返してあげて」と伝えたことは覚えています。&lt;/p>
+&lt;p>もう1つは私自体はあまり成果を出すことができず伸び悩んだ1年となったことです。 &lt;br>
+1点の曇りもなくやりきったという感覚と求められる成果を出せない不甲斐なさがありました。&lt;/p>
+&lt;p>本来人材育成は組織全体でやっていくものですが &lt;br>
+目の前のチームメンバーを大事に想いすぎるがあまり視野が狭くなっていました。&lt;/p>
+&lt;p>リーダーの役目は与えられたリソース(人・モノ・カネ)を用いて組織の成長に貢献することです。 &lt;br>
+メンバーと向き合うのは大切なことですがあくまでチームとして成果を出すための手段です。&lt;/p>
+&lt;p>今考えると役目と手段を混同していたと思います。 &lt;br>
+リーダーとして目の前のチームメンバーに時間と想いを込めすぎたことで &lt;br>
+求められていた既存メンバーのスキルアップ施策が後回しになってしまっていましたし &lt;br>
+想いが強すぎるあまり逆にメンバーと良い関係性を築けませんでした。 &lt;br>
+「あ、今全然チームがまとまってないな」と感覚でわかりました。 &lt;br>
+相手のことを考えているつもりが現実は自分のエゴを押し付ける人になっていたとも感じます。&lt;/p>
+&lt;p>その中で「視座が高すぎる」「頑張り方を変えた方がいい」「リーダーには向いてないよね」等々&lt;br>
+心にグサッとくるお言葉をいただいたこともありました。&lt;br>
+自分が信じてやってきたことで成果を出せないことが苦しく悔しかったです。&lt;/p>
+&lt;p>全てはリーダーとして明確なリーダーシップを持てなかった自分の責任だと思いました。&lt;br>
+何よりも私のチームで人生の時間を使ってくれているメンバーに申し訳ないという気持ちが強く&lt;br>
+もう一度立ち上がろうと決めたのがコーチングを受ける直前です。&lt;br>
+気付いたらコーチングを受けたいと連絡をしていました。&lt;/p>
+&lt;h2 id="コーチングってどんなものだろう">コーチングってどんなものだろう
+&lt;/h2>&lt;p>流行っているのでChatGPTに聞いてみました。答えはこうです。&lt;/p>
+&lt;blockquote>
+&lt;p>コーチングは、個人やチームが目標を設定し、成果を出すための支援をするプロセスです。コーチングは、個人や組織の目標達成に役立ち、行動変容や成長を促進します。 &lt;br>
+コーチングは、専門家やリーダーによって提供されることがありますが、一般的には専門的な訓練を受けたコーチによって提供されます。 &lt;br>
+コーチングのプロセスは、クライアントとコーチの間での対話を通じて行われます。 &lt;br>
+コーチは、クライアントに対して質問やフィードバックを提供し、クライアントが自己認識を高め、自己成長を促進するのを支援します。 &lt;br>
+コーチングは、個人的な目標からビジネスの目標まで、さまざまな目的に適用されます。 &lt;br>
+例えば、ビジネスの場合は、組織のビジョンや戦略の実現、リーダーシップスキルの向上、パフォーマンス改善、チームのコラボレーション、ストレス管理などを目的として行われます。 &lt;br>
+一方、個人の場合は、キャリアや人生の目標の達成、自己啓発、ストレス管理、人間関係の改善などを目的として行われます。 &lt;br>
+コーチングは、クライアントに対して高度なサポートを提供することによって、彼らが自己成長や目標達成に向けた行動を促進し、より充実した人生やキャリアを築くのを支援します。&lt;/p>
+&lt;/blockquote>
+&lt;p>説明するとしたらこんな感じなんですかねえ、難しい。&lt;/p>
+&lt;p>コーチのスタイルにもよると思いますが、私が受けていて感じるのは&lt;br>
+「あなたらしくあなたの人生を歩んでいいんだよ」と背中を押してくれる場所であり&lt;br>
+その時の心境でどんなことを伝えても受け入れて味方でいてくれる力強さがあることです。&lt;br>
+この土台があるからこそ、遠慮なく自分と向き合うことが出来るんだろうなと思います。&lt;/p>
+&lt;p>ここで大事なことは&lt;strong>答えを教えてくれる場所ではない&lt;/strong>ということです。&lt;/p>
+&lt;p>自分がどうしたいのかは本来自分の心の中にしかありません。&lt;br>
+誰かにすがりたくなる時は生きていればありますが&lt;br>
+どれだけ他者の意見を聞いても参考書を読んでも自分の人生の答えは見つかりません。&lt;br>
+自分の意思で自分の心と向き合うことでしか見つけられません。&lt;/p>
+&lt;p>会社・地位・人間関係といったしがらみを断ち切り&lt;br>
+人生を歩むために自分がどうしていくかを徹底的に考え抜く場所であるべきです。&lt;/p>
+&lt;p>こうして悩んでいる時にたくさんの方が声をかけてくれてアドバイスをいただけます。&lt;br>
+本当に私は人と環境に恵まれていると思います。&lt;br>
+しかし、他者は自分とは違った人生を歩んでいます、自分の人生は自分でしか生きれません。&lt;/p>
+&lt;p>それぞれが別々の人生を歩み、自分の人生を力強く生き続けた結果として&lt;br>
+他者を勇気づけたり助けになったりする、それができる私でありたいと強く思います。&lt;/p>
+&lt;p>最初に連絡をしてきぃさんから返事をいただいた時に&lt;br>
+「応援する人にも、応援する人が必要だと思います。」という言葉をいただきました。&lt;br>
+たった一言で悩みや気持ちが軽くなったことを覚えています。&lt;/p>
+&lt;h2 id="コーチングで気付いたこと">コーチングで気付いたこと
+&lt;/h2>&lt;p>コーチングを受ける時に考えてまとめたことを一部記載すると&lt;/p>
+&lt;ul>
+&lt;li>今目指しているのは特定の部署のチームという垣根を越えること。&lt;/li>
+&lt;li>部署の中のチームという小さなまとまりで満足したくない。&lt;/li>
+&lt;li>そのまとまりでこの先も続けていくのはキャリアの頭打ちになる&lt;/li>
+&lt;li>0 → 1のプロダクト開発をしたい(自社サービスを主軸とした起業)　&lt;/li>
+&lt;li>変化と挑戦を恐れず覚悟を持って行動する1年としたい&lt;/li>
+&lt;li>特に付き合いの長い親友と飲みながら話しているときにエネルギーをもらえる&lt;/li>
+&lt;li>父と母から始まり、友人や職場の仲間などみんな大切&lt;/li>
+&lt;li>自分以外の誰かのためにを優先するタイプ&lt;/li>
+&lt;li>この先は自分の人生とキャリアを考えて前に進みたい&lt;/li>
+&lt;li>今自分と関わっているチームメンバーを時には突き放したり、愛想れない場合は別れたりするタイミングが出てくるような気がする&lt;/li>
+&lt;li>今まではそれが嫌で申し訳ない気持ちが先行して歩幅を合わせて進んできた&lt;/li>
+&lt;li>人と場を創る、人材育成の文化を残す&lt;/li>
+&lt;li>人生の価値は、何を得るかではなく、何を残すかにある&lt;/li>
+&lt;li>自分自身の想いや価値観に共感してくれる人を増やす&lt;/li>
+&lt;li>引き出しを増やす&lt;/li>
+&lt;li>経験してきたことをありのままに伝える&lt;/li>
+&lt;li>仕事、業務以外での経験を意欲的にやる&lt;/li>
+&lt;li>世界を見てくる&lt;/li>
+&lt;li>父と母が誇れる人になりたい&lt;/li>
+&lt;li>自分と関わった全ての人を幸せにする&lt;/li>
+&lt;/ul>
+&lt;p>改めて時間を取って言葉と文章にしてみるとたくさん想いが出てきます。&lt;/p>
+&lt;p>私が他者と関わる上でのスタンスは父と母の影響を受けているなと感じます。 &lt;br>
+本当に2人に愛されてるなと思います。&lt;br>
+仕事をして成長してようやく分かりましたが最高の親です。&lt;/p>
+&lt;p>つい最近も私がLineのメッセージを返さなすぎて生存確認の電話が来ました。&lt;br>
+ゴールデンウイーク帰ってくる？という確認でしたが&lt;br>
+元気だったらそれでいい、頑張れよって言ってくれました。&lt;br>
+本当に毎日私のことを気にかけてくれてるんだろうなというのが伝わってきます。&lt;/p>
+&lt;p>成人してお酒が飲めるようになってからは父とは軽く飲みに行っています。&lt;br>
+本当に嬉しそうにお酒飲むんですよね、私もいつか気持ちが分かるときが来るでしょうかｗ&lt;/p>
+&lt;p>母にはボーナスのときは毎回プレゼントを送っています。&lt;br>
+以前に送ったお財布は風呂敷に包んで大事にしてくれているのを見ましたが普通に使えばいいのにｗ&lt;/p>
+&lt;p>2人のすごさは、どれだけ反抗しても常に私の先を見据えて優しさの中に厳しさがあったことです。&lt;/p>
+&lt;p>本当の愛は都合の良い優しい言葉だけを投げかけることではありません。&lt;/p>
+&lt;ul>
+&lt;li>時に嫌われようとも相手のことを想って厳しいことも伝える。&lt;/li>
+&lt;li>相手が必ずできるようになると信じて最低限のサポートをする、そしてひたすら待つ。&lt;/li>
+&lt;li>何があっても最後まで味方でいる。&lt;/li>
+&lt;/ul>
+&lt;p>が大事だと思います、全てを2人は私に長い時間をかけてやってくれました。（今もですが）&lt;/p>
+&lt;p>人が何か新しいことを始めようとしたとき、最初から上手くいくわけではありません。 &lt;br>
+時間がかかるときが山ほどありますし自分1人だけの力では乗り越えられないときがあります。&lt;/p>
+&lt;p>結果がでないとき、上手くいっていない期間は目立つし批判もあれば否定もあります。 &lt;br>
+もうダメだと思うときもあるかもしれません。&lt;/p>
+&lt;p>それでも信じて待ってくれる人がいれば再び立ち上がれるような気がします。 &lt;br>
+待つということは大変なことです。でも大事なことです。 &lt;br>
+私も愛を持って周りの人の味方で在り続けたいと強く思います。&lt;/p>
+&lt;p>常に心を許せる親友がいることも大事です。 &lt;br>
+仕事があるので夏季休暇や年末年始にしか会ってはいませんが大切な人達であると思います。 &lt;br>
+高1のときからずっとなのでもう10年以上経過しましたが &lt;br>
+「こいつらとは墓場まで関係続くだろうな」という感覚があります。&lt;/p>
+&lt;p>上手くいかないときも、落ち込んだ時も、心の拠り所は誰しも必要になります。 &lt;br>
+親友と話している時間が私にとってはその拠り所になっています。 &lt;br>
+感謝しつつ自分も誰かの拠り所でありたい。 &lt;br>
+次のゴールデンウイークに帰ったときにまた近況報告したいですね。&lt;/p>
+&lt;p>現状維持が嫌で常に成長していきたいと思っています。 &lt;br>
+現状に満足することもないし、小さなまとまりに押さえつけられるのも嫌です。 &lt;br>
+自分が成長することで周りの人にも影響を与えたい。その人の人生が変わる瞬間を見たい。 &lt;br>
+成長とは今まで出来なかったことに挑戦すること、いち早く失敗して学ぶことです。 &lt;br>
+自分だけでなくチームとメンバーも成長出来るようにしたい。 &lt;br>
+メンバーの面倒を見るという表現は私はあまり好きではありません。 &lt;br>
+仕事を通してメンバー自身が自分の力で人生を歩めるようになることが大事です。&lt;/p>
+&lt;p>人生の目的は&lt;strong>自分と関わる全ての人を自分とは違う形で幸せにする&lt;/strong>こと。&lt;/p>
+&lt;p>TEDの動画に影響を受けています。 &lt;br>
+&lt;a class="link" href="https://www.youtube.com/watch?v=cjtmDEG-B7U" target="_blank" rel="noopener"
+>&lt;strong>人生の価値は、何を得るかではなく、何を残すかにある。&lt;/strong>&lt;/a>という動画です。&lt;/p>
+&lt;p>冒頭の内容が刺さりました。&lt;/p>
+&lt;blockquote>
+&lt;p>皆さんは何のために働いていますか？ &lt;br>
+皆さんにとって働く意味って何ですか？ &lt;br>
+学校を卒業してこれからは自立しなきゃと会社に入って &lt;br>
+早く仕事を覚えようと朝から晩までがむしゃらに働いて &lt;br>
+いろんな仕事がそのうち出来るようになってきて気付けば部下がいて &lt;br>
+人間としても成長しようと一生懸命努力し続けてきた。 &lt;br>
+でもふと俺ってなんのために働いてるんだろう。 &lt;br>
+そんな風に思ったことありませんか？&lt;/p>
+&lt;/blockquote>
+&lt;p>あるあるです。 &lt;br>
+私も仕事の目的や意味を見失ったことがあります。 &lt;br>
+「何のために働いてるんだろう？大して認められもしないのに」と思うことも多々ありました。 &lt;br>
+それが去年の1年間だったと思います。&lt;/p>
+&lt;p>人材育成は未来への投資です、時間がかかるしすぐにリターンがあるわけではありません。 &lt;br>
+他者の代わりはできないので、私ができることは研修や勉強会などの成長の機会を作ることや &lt;br>
+例えば1on1やメンター面談の機会を通して自己効力感を高めることしか出来ません。&lt;/p>
+&lt;p>そして長期的な目線が必要です、必要なことだけどすぐに売上に繋がるわけではないので &lt;br>
+短期的な目線で考えると「それってやる意味あるの？」って普通に言われます。 &lt;br>
+でも人は勝手に成長することはないので周りの人のサポートや助言が必ず必要なんです。 &lt;br>
+それをやらなければどれだけ優秀な人であっても腐ります。&lt;/p>
+&lt;p>そんな中でも共に働く仲間やチームメンバーと接するうちに &lt;br>
+認められないとかそんなの関係なく、ただ目の前の人と誠意を持って向き合いながら &lt;br>
+失敗して上手くいかなくても泥をすくいながら道を切り開く覚悟を持つことが大事だと思いました。 &lt;br>
+それがリーダーです。道を示せない、責任を持てないリーダーは不要です。&lt;/p>
+&lt;p>死ぬときは何も持っていけない、ただ何かを残していくことは出来る。 &lt;br>
+自分より優れた人を残して静かにこの世を去りたいと思います。&lt;/p>
+&lt;h2 id="この先の人生でやっていきたいこと">この先の人生でやっていきたいこと
+&lt;/h2>&lt;h3 id="仕事">仕事
+&lt;/h3>&lt;p>この1年は4月に入社してくれた新人メンバーの育成を妥協なくやりきる。&lt;br>
+次年度には人材育成を担う新たな組織体制を考えていきたいです。&lt;br>
+ここは組織全体の意向もあるのでしっかりと議論していきたいですが&lt;br>
+自分としてもチームとしても会社としてもベストな選択になるように会話していきたいです。&lt;br>
+細かいことは省略しますがいろいろ画策してます。&lt;/p>
+&lt;p>あと、今の会社と立場で働き続けることが正解ではなくなるタイミングが来るだろうなと思っていて&lt;br>
+将来的には今の会社から独立したい(40歳くらいまでには)&lt;br>
+どの領域で目指していくのかは考え中。エンジニアリングと人材育成両方やりたいとなるとは思う。&lt;/p>
+&lt;h3 id="プライベート">プライベート
+&lt;/h3>&lt;p>やりたいことたくさんあります。&lt;br>
+今は仕事の比重が大きく時間を割けないことが多々ありますがたくさん遊びたいです。&lt;/p>
+&lt;p>まずはお酒を飲むのが好きなので旅行ついでに全国の地酒を飲みたい。&lt;br>
+ジンが好きで今も飲んでるんですが、日本酒にハマってから日本全国に行きたいと思うように。&lt;br>
+沖縄と静岡もう1回行きたいです。特に静岡のさわやかのハンバーグは美味しすぎました。&lt;br>
+福岡は明太子目当て、長野は真澄という日本酒目当てで行きたいです。&lt;/p>
+&lt;p>最高のリーダーになるためにプライベートでも勉強したいです。&lt;br>
+以下の2つの本を読んでます。良書の予感です。&lt;/p>
+&lt;ul>
+&lt;li>若手育成の教科書&lt;/li>
+&lt;li>エンジニアのためのマネジメント入門&lt;/li>
+&lt;/ul>
+&lt;p>本だけ読んでると飽きちゃうので手も動かしたいです。&lt;br>
+インフラだけでなくアプリケーション開発にも手を伸ばしたいですね。&lt;br>
+バックエンド側のコードは調べれば理解して書けますが&lt;br>
+フロントエンド側があまりに理解できなさすぎるので&lt;br>
+Next.jsでコードを書いてVercelでデプロイできるところまでやろうとしています。&lt;br>
+本サイトがHugoの静的サイトなのでリプレイスするのもありかもしれない。&lt;/p>
+&lt;p>あとは、オンラインゲーム(PSO2NGS)の総プレイ時間10000時間を目指します&lt;br>
+(今6500時間くらい？忘れた)&lt;/p>
+&lt;h2 id="まとめ">まとめ
+&lt;/h2>&lt;p>人生は一度きりなので悔いなく生きたい、それだけです。&lt;br>
+久々に長文書いたら燃え尽きて逆にまとめが出てこずｗ（ｼｶﾀﾅｲ&lt;/p></description></item><item><title>PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる</title><link>https://nezumisannn.io/blog/packer-hcl2-sample/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/packer-hcl2-sample/</guid><description>&lt;img src="https://nezumisannn.io/blog/packer-hcl2-sample/cover.jpg" alt="Featured image of post PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる" />&lt;h2 id="記述したコード">記述したコード
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/nezumisannn/packer-hcl2-sample.git" target="_blank" rel="noopener"
+>https://github.com/nezumisannn/packer-hcl2-sample.git&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="packerとは">Packerとは
+&lt;/h2>&lt;ul>
+&lt;li>HashiCorpが開発しているCLIツール&lt;/li>
+&lt;li>マルチクラウドに対応したゴールデンイメージの作成ができる&lt;/li>
+&lt;li>設定ファイルの書式はJson or HCL2&lt;/li>
+&lt;li>バージョン1.5からHCL2に対応した&lt;/li>
+&lt;/ul>
+&lt;h2 id="参照">参照
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://packer.io/guides/hcl/" target="_blank" rel="noopener"
+>https://packer.io/guides/hcl/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://packer.io/docs/builders/docker.html" target="_blank" rel="noopener"
+>https://packer.io/docs/builders/docker.html&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://packer.io/docs/provisioners/shell.html" target="_blank" rel="noopener"
+>https://packer.io/docs/provisioners/shell.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="hcl2で記述するメリット">HCL2で記述するメリット
+&lt;/h2>&lt;ul>
+&lt;li>TerraformもHCL2で記述するため共通の書式を利用できる&lt;/li>
+&lt;li>設定ファイルを用途に合わせて分割できる&lt;/li>
+&lt;li>コードの途中でコメントを追加できる&lt;/li>
+&lt;/ul>
+&lt;h2 id="packerのバージョン">Packerのバージョン
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ packer version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Packer v1.5.5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="設定ファイル一覧">設定ファイル一覧
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">tree&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">README&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">md&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">sources&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">└──&lt;/span> &lt;span class="n">variable&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="variablepkrhcl">variable.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>variableを利用してコード内で利用する変数を定義する&lt;/li>
+&lt;/ul>
+&lt;h3 id="sourcespkrhcl">sources.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>ビルド時に利用するイメージを利用する&lt;/li>
+&lt;li>Json形式で記述する際のBuildersに相当する&lt;/li>
+&lt;/ul>
+&lt;h3 id="buildpkrhcl">build.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>ビルドを行う際の処理を記述する&lt;/li>
+&lt;li>sourcesでsources.pkr.hclに書いた設定を複数読み込むことが可能&lt;/li>
+&lt;li>その他Jsonで記述する際と同様にprovisionerでShellの他、Ansibleなどと連携可能&lt;/li>
+&lt;/ul>
+&lt;h2 id="ファイル内容">ファイル内容
+&lt;/h2>&lt;h3 id="variablepkrhcl-1">variable.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;image_nginx&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;nginx:latest&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;image_php-fpm&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;php:7.3-fpm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="sourcespkrhcl-1">sources.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">/*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;image&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;nginx:latest&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;commit&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;nginx&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">commit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">/*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;image&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;php:7.3-fpm&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;commit&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;php-fpm&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_php&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">fpm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">commit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="buildpkrhcl-1">build.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">build {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sources = [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;source.docker.nginx&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;source.docker.php-fpm&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> provisioner &amp;#34;shell&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inline = [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;hostname &amp;amp;&amp;amp; cat /etc/os-release&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="ビルド実行">ビルド実行
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ packer build ./
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="現時点での問題">現時点での問題
+&lt;/h2>&lt;ul>
+&lt;li>packer validateが使えない
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/hashicorp/packer/issues/8538" target="_blank" rel="noopener"
+>https://github.com/hashicorp/packer/issues/8538&lt;/a>&lt;/li>
+&lt;li>今後のアップデートに期待&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>GROWTH ARCHITECT(グロースアーキテクト)というポジションを考えてみた</title><link>https://nezumisannn.io/blog/growth-architect/</link><pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/growth-architect/</guid><description>&lt;img src="https://nezumisannn.io/blog/growth-architect/cover.jpg" alt="Featured image of post GROWTH ARCHITECT(グロースアーキテクト)というポジションを考えてみた" />&lt;h2 id="概要">概要
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームを中長期的に成長させていくことを目的とした新しいポジション&lt;/li>
+&lt;/ul>
+&lt;h2 id="責任">責任
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームの生産性向上と成長の最大化&lt;/li>
+&lt;/ul>
+&lt;h2 id="目標">目標
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームのオートスケーリング&lt;/li>
+&lt;li>組織のビジネスに対する間接的な貢献&lt;/li>
+&lt;/ul>
+&lt;h2 id="成長の定義">成長の定義
+&lt;/h2>&lt;ul>
+&lt;li>以下の技術面・精神面の2つを継続してチーム及び個人で磨いていくことを「成長」とする
+&lt;ul>
+&lt;li>ビジネスの技術的要件を達成するために必要なスキルセット&lt;/li>
+&lt;li>困難な課題に直面した場合でも自走できるエンジニアマインド&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Growth Architectは上記成長を自責と捉えて支援していく役割を担う&lt;/li>
+&lt;/ul>
+&lt;h2 id="エンジニアリングチームの定義">エンジニアリングチームの定義
+&lt;/h2>&lt;ul>
+&lt;li>お客様やサービスと徹底的に向き合い、エンジニアリング領域における技術的なソリューションを提供する集団&lt;/li>
+&lt;li>Growth Architectは中立的な立場で物事を把握するため基本的にエンジニアリングチームには属さずに独立して活動する&lt;/li>
+&lt;li>ただし、エンジニアリングチームのリソースが不足している場合は積極的に支援する&lt;/li>
+&lt;li>トランプにおけるジョーカーのような役割を果たす&lt;/li>
+&lt;/ul>
+&lt;h2 id="現状の課題と理想">現状の課題と理想
+&lt;/h2>&lt;h3 id="課題">課題
+&lt;/h3>&lt;ul>
+&lt;li>組織のビジネスの成長とエンジニアリングチームの成長が反比例している
+&lt;ul>
+&lt;li>ビジネスの技術的要件がチームメンバーのスキルセットを超えている&lt;/li>
+&lt;li>新規案件の対応に追われるようになり、一定のスキルセットを持ったメンバーに負荷が集中する&lt;/li>
+&lt;li>現組織や業務における課題を改善していくための時間を確保できず技術的負債が増加する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="理想">理想
+&lt;/h3>&lt;ul>
+&lt;li>組織のビジネスの成長に応じてエンジニアリングチームもスケールアップできる
+&lt;ul>
+&lt;li>チームメンバーを増やすことも必要だが単に増やせば良いというわけではない&lt;/li>
+&lt;li>チームと個人が成長し、チームメンバー1人に対して対応できる課題の数と幅が増えていくことが理想&lt;/li>
+&lt;li>この対応できる課題の数と幅を継続的に増やしていくことをGrowth Architectでは「チューニング」と呼ぶ&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>一定のメンバーに集中した負荷を分散できる
+&lt;ul>
+&lt;li>負荷が集中しているということは業務が属人化しているということ&lt;/li>
+&lt;li>属人化は悪ではないが、過度な属人化はメンバーを疲弊させる&lt;/li>
+&lt;li>汎用的かつどのメンバーでも対応できる範疇の業務は自動化していくことが理想&lt;/li>
+&lt;li>Growth Architectでは業務の自動化や効率化の面における技術的な支援を行うことが求められる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>現組織や業務における課題に向き合い改善していくことができる
+&lt;ul>
+&lt;li>課題がない組織は存在しないが、エンジニアリングチームの成長が追いつかないため後回しになりがち&lt;/li>
+&lt;li>Growth Architectではエンジニアリングチームと連携し、現状の課題の把握やソリューションを提供する役割を担う&lt;/li>
+&lt;li>組織の事業継続において長年受け継がれてきたフローを変えていくことも厭わない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="具体的な業務内容">具体的な業務内容
+&lt;/h2>&lt;h3 id="育成">育成
+&lt;/h3>&lt;ul>
+&lt;li>エンジニアリングチームに属するメンバーの育成&lt;/li>
+&lt;li>メンバーとは以下の3つの節目において長期的に関わっていく
+&lt;ul>
+&lt;li>出会い
+&lt;ul>
+&lt;li>研修内容の決定&lt;/li>
+&lt;li>新人研修の実施とフォローアップ&lt;/li>
+&lt;li>未経験からエンジニアの卵になってもらう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>自立
+&lt;ul>
+&lt;li>エンジニアリングチームへの配属&lt;/li>
+&lt;li>OJTの実施と自身が持っているノウハウの継承&lt;/li>
+&lt;li>OJT実施後のフィードバック&lt;/li>
+&lt;li>自走できる経験を積ませて卵の殻を破ってもらう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>継承
+&lt;ul>
+&lt;li>Growth Architectからの継承ではない&lt;/li>
+&lt;li>自走できるようになったメンバーからさらにその後輩へノウハウを継承してもらう&lt;/li>
+&lt;li>Growth Architectの使命は自身をも超えていく人材を育成すること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="登壇">登壇
+&lt;/h3>&lt;ul>
+&lt;li>社内勉強会の定期的な開催&lt;/li>
+&lt;li>外部の勉強会やイベントへの積極的な登壇
+&lt;ul>
+&lt;li>組織のネームバリューの向上&lt;/li>
+&lt;li>Growth Architect自身の成長のため&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>上記の活動を行うことで、エンジニアリング組織において必要不可欠なアウトプットを行う新しい組織文化を形成する&lt;/li>
+&lt;/ul>
+&lt;h3 id="最新技術の検証及び導入">最新技術の検証及び導入
+&lt;/h3>&lt;ul>
+&lt;li>エンジニアリングチームのスキルセットを超えてしまっている技術領域の検証及び導入を支援する&lt;/li>
+&lt;li>組織のR＆DのRの部分を担い、エンジニアリングチームの業務に導入するための運用フローの確立と啓蒙活動を行う&lt;/li>
+&lt;/ul></description></item><item><title>私が勉強会やセミナーで登壇するのは、会社における新しい文化を築きたいから</title><link>https://nezumisannn.io/blog/build-culture/</link><pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/build-culture/</guid><description>&lt;img src="https://nezumisannn.io/blog/build-culture/cover.jpg" alt="Featured image of post 私が勉強会やセミナーで登壇するのは、会社における新しい文化を築きたいから" />&lt;p>みなさんおはこんばんにちは！&lt;br>
+インフラエンジニアのねずみさん家です。&lt;/p>
+&lt;p>タイトル通りですが&lt;br>
+私は勉強会やセミナーでの登壇を業務とは別で継続しています。&lt;/p>
+&lt;p>現在も会社の後押しがあり、かなり自由にやらせてもらってますが&lt;br>
+登壇を通して新たな目標が出来たのでまとめてみたいと思います。&lt;/p>
+&lt;p>下記に今までの登壇履歴を記載していますのでよければ見てみてください↓&lt;/p>
+&lt;p>&lt;a class="link" href="https://nezumisannn.io/about/" target="_blank" rel="noopener"
+>https://nezumisannn.io/about/&lt;/a>&lt;/p>
+&lt;h2 id="会社における新しい文化を築きたい">会社における新しい文化を築きたい
+&lt;/h2>&lt;p>これが今の目標です。&lt;br>
+始めた当初はモチベーションを失っている自分を変えるのが目標でした。&lt;/p>
+&lt;p>丁度仕事に慣れてきたときだったんですが&lt;br>
+状況に満足して新しい挑戦をしなくなった結果&lt;br>
+毎日同じことの繰り返しでつまらなくなっていたんですよね。&lt;/p>
+&lt;p>そこから約1年、月に1～2ペースで登壇をしてきましたが&lt;br>
+自身の活動に共感してくれる人が出てきました。&lt;br>
+私の後輩なんですけどね(笑)&lt;/p>
+&lt;p>その結果、今まで社内では根付いていなかった新しい試みを&lt;br>
+後輩自らが提案して実践してくれるようになりました。&lt;/p>
+&lt;p>つい最近は「もくもく会」という名のサーバー構築勉強会を開きました。&lt;br>
+AWSのVPCを構築してみるという基礎的な内容でしたが&lt;/p>
+&lt;p>・後輩自らが提案して実践してくれたこと&lt;br>
+・他のメンバーも積極的に参加してくれたこと&lt;/p>
+&lt;p>が私からするととても嬉しかったですし&lt;br>
+会社にとっても良い流れになると思うんです。&lt;/p>
+&lt;p>個々のメンバーの技術レベルが上がるのはもちろんのこと&lt;br>
+また別のメンバーがこの活動に共感して新しいアイデアを出してくれるかもしれません。&lt;/p>
+&lt;p>このもくもく会、当然ですが会社から指示があって開いたものではありません。&lt;br>
+社内のメンバーが自らの意思で「開きたい！」「参加したい！」と思ったから実現したものです。&lt;/p>
+&lt;p>文化を築くということはこのような「共感の連鎖」の先で成し遂げられるものではないでしょうか。&lt;br>
+一人でできることはやっぱり限られていますから&lt;br>
+みんなで協力して前向きに取り組んでいく必要があります。&lt;/p>
+&lt;p>だからこそ自らが誰よりも前に立って登壇を継続することで&lt;br>
+私と関わる人の成長や行動の後押しをする立場で居続けたいなと節に思っています。&lt;/p>
+&lt;h2 id="これから">これから
+&lt;/h2>&lt;p>1/29にDockerをテーマとした勉強会に登壇します。&lt;br>
+よろしければ見に来てください。&lt;/p>
+&lt;p>&lt;a class="link" href="https://beyondjapan.connpass.com/event/160565/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/160565/&lt;/a>&lt;/p>
+&lt;p>2月もいくつか予定があるので、また後日お知らせしますね。&lt;/p></description></item><item><title>TERRAFORMのMODULEを作成する(VPC)</title><link>https://nezumisannn.io/blog/terraform-module-vpc/</link><pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/terraform-module-vpc/</guid><description>&lt;img src="https://nezumisannn.io/blog/terraform-module-vpc/cover.jpg" alt="Featured image of post TERRAFORMのMODULEを作成する(VPC)" />&lt;p>みなさんこんにちは！&lt;br>
+インフラエンジニアのねずみさん家です。&lt;/p>
+&lt;p>今回はTerraformのModuleを作成してAWSのVPCを作成します。&lt;br>
+初めての投稿なので初回セットアップの部分も書いてみたいと思います。&lt;br>
+Terraformは非常に便利なツールなので是非利用してみてくださいー。&lt;/p>
+&lt;h2 id="terraformのインストール">Terraformのインストール
+&lt;/h2>&lt;p>Macを利用していてbrewが利用できる方は以下でインストール可能です。&lt;/p>
+&lt;pre>&lt;code>brew install terraform
+&lt;/code>&lt;/pre>
+&lt;p>TerraformはGolangで開発されているため&lt;br>
+&lt;a class="link" href="https://www.terraform.io/downloads.html" target="_blank" rel="noopener"
+>&lt;strong>こちらから&lt;/strong>&lt;/a>バイナリファイルをダウンロードすることも可能です。&lt;/p>
+&lt;p>インストールできたらバージョンを確認してみましょう。&lt;/p>
+&lt;pre>&lt;code>terraform version
+&lt;/code>&lt;/pre>
+&lt;p>今回はバージョン0.12.18を利用します。&lt;br>
+古いバージョンの0.11ではサポートされていない記述も含まれているためご注意ください。&lt;/p>
+&lt;h2 id="クレデンシャルの用意">クレデンシャルの用意
+&lt;/h2>&lt;p>Terraformの処理でAWSのAPIを実行することになるためクレデンシャルを用意します。&lt;br>
+用意したらTerraformから読み込むために環境変数に登録します。&lt;br>
+変数名の頭にTF_VARとつけることでTerraformから読み込むことができるようになります。&lt;/p>
+&lt;pre>&lt;code>export TF_VAR_access_key=[Access Key]
+export TF_VAR_secret_key=[Secret Key]
+export TF_VAR_role_arn=[Role ARN]
+&lt;/code>&lt;/pre>
+&lt;p>terraform.tfvarsに記載しても良いですが&lt;br>
+Gitに誤って上げてしまって不正アクセスを受けたという記事が散見されるため&lt;br>
+基本的にはファイルに直接認証情報を記載しないのが良いと思います。&lt;/p>
+&lt;p>また今回はTerraformからAssumeRoleを行うため&lt;br>
+適切な権限を付与したIAMロールも用意しておきます。&lt;/p>
+&lt;h2 id="hclの記述">HCLの記述
+&lt;/h2>&lt;p>ここからHCLを記載していきます。&lt;br>
+HCLはHashicorp Configuration Languageの略で&lt;br>
+Terraformのコードを書いていくときに利用する独自言語を指します。&lt;/p>
+&lt;p>今回記載したVPCのモジュールの階層構造は以下のようになっています。&lt;/p>
+&lt;pre>&lt;code>.
+├── network
+│ └── vpc
+│ ├── main.tf
+│ ├── outputs.tf
+│ └── variables.tf
+├── network.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+└── variables.tf
+&lt;/code>&lt;/pre>
+&lt;p>tfstateをローカルで管理していますが&lt;br>
+実際に使う場合はbackendでS3などで管理するようにするのが定石です。&lt;/p>
+&lt;p>まずはprovider.tfを書いていきましょう。&lt;/p>
+&lt;pre>&lt;code>provider &amp;quot;aws&amp;quot; {
+access_key = var.access_key
+secret_key = var.secret_key
+region = var.region
+assume_role {
+role_arn = var.role_arn
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>providerではAWSにアクセスするために必要な認証情報を指定します。&lt;br>
+Terraformではvariableで変数を定義してvar.変数名で変数の値を取得することが可能です。&lt;br>
+variables.tfの中身を見てみましょう。&lt;/p>
+&lt;pre>&lt;code>variable &amp;quot;access_key&amp;quot; {
+description = &amp;quot;AWS Access Key&amp;quot;
+}
+variable &amp;quot;secret_key&amp;quot; {
+description = &amp;quot;AWS Secret Key&amp;quot;
+}
+variable &amp;quot;role_arn&amp;quot; {
+description = &amp;quot;AWS Role ARN for Assume Role&amp;quot;
+}
+variable &amp;quot;region&amp;quot; {
+description = &amp;quot;AWS Region&amp;quot;
+default = &amp;quot;ap-northeast-1&amp;quot;
+}
+&lt;/code>&lt;/pre>
+&lt;p>variableで変数を定義しています。&lt;br>
+この変数には先ほど環境変数に指定した値が自動で代入されます。&lt;/p>
+&lt;p>ここまで書けたらいよいよVPCの作成部分を書いていきましょう。&lt;br>
+network.tfの中身を見てみます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">module &amp;#34;vpc&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> source = &amp;#34;./network/vpc&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vpc_config = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name = &amp;#34;example&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cidr_block = &amp;#34;10.0.0.0/16&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enable_dns_support = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enable_dns_hostnames = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>sourceに読み込むModuleの処理を記載した.tfが存在するディレクトリの相対パスを記載します。&lt;br>
+また、Module側で必要な値を変数化するため&lt;br>
+vpc_configという名前で変数を作成してModule側に渡しています。&lt;/p>
+&lt;p>Module側を見ていきます、まずはvariables.tfから見ていきましょう。&lt;br>
+ここでnetwork.tfから渡された変数を受け取っています。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;vpc_config&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">object&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cidr_block&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_support&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ne">bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_hostnames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ne">bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Terraform0.12からobjectという便利なタイプが追加されています。&lt;br>
+0.11まではmap型でも同じ型の値しか格納することができませんでしたが&lt;br>
+objectを利用するとstringとboolといった異なる型の値を同時に扱うことができます。&lt;/p>
+&lt;p>次にmain.tfを見ていきましょう。&lt;br>
+ここでVPCを作成するためにaws_vpcリソースを記述しています。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">resource&lt;/span> &lt;span class="s2">&amp;#34;aws_vpc&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;this&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cidr_block&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cidr_block&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_support&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enable_dns_support&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_hostnames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enable_dns_hostnames&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tags&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここでも値が変数化されていますが&lt;br>
+vpc_configという名前で呼び出し側から値を受け取っているため&lt;br>
+var.変数名.オブジェクトキーというように指定すると値を参照することができます。&lt;/p>
+&lt;p>ここまでくればもう一息です。&lt;br>
+最後にリソースが作成された後の情報を参照できるようにoutputを書いておきましょう。&lt;br>
+outputs.tfを見ていきます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">output &amp;#34;vpc&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> value = aws_vpc.this
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここも0.12から追加された記述を利用しています。&lt;br>
+0.11までは1つのoutputに対して1つの値しか扱うことができませんでしたが&lt;br>
+0.12からは複数の値を扱うことができるようになります。&lt;br>
+aws_vpc.リソース名とするとvpc_idやcidr_blockなどの複数の値がmap型でまとめて出力されます。&lt;/p>
+&lt;p>ここまで書いたらVPCを作成することが可能です。
+まずはドライランを実行してみましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform plan
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>成功すると以下のように結果が返ってきます。&lt;br>
+エラーが出た場合はHCLに記述ミスがある可能性があるので書き直しましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Refreshing Terraform state in-memory prior to plan...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The refreshed state will be used to calculate this plan, but will not be
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">persisted to local or remote state storage.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------------------------------------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">An execution plan has been generated and is shown below.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Resource actions are indicated with the following symbols:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + create
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Terraform will perform the following actions:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # module.vpc.aws_vpc.this will be created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + resource &amp;#34;aws_vpc&amp;#34; &amp;#34;this&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + arn = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + assign_generated_ipv6_cidr_block = false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + cidr_block = &amp;#34;10.0.0.0/16&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_network_acl_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_route_table_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_security_group_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + dhcp_options_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_classiclink = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_classiclink_dns_support = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_dns_hostnames = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_dns_support = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + instance_tenancy = &amp;#34;default&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + ipv6_association_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + ipv6_cidr_block = (known after apply)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ドライランは問題ないようですので実際に反映してみましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform apply
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>反映されたら作成されたVPCの情報を参照したいため&lt;br>
+Module側で指定したoutputを呼び出し側で受け取り内容を確認します。&lt;br>
+呼び出し元のoutputs.tfを確認します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">output &amp;#34;vpc_id&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> value = module.vpc.vpc.id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここで記述するのはmodule.モジュール名.参照する値となり&lt;br>
+今回はVPCのIDを確認したいためmodule.vpc.vpc.idとなります。&lt;br>
+記述したら再度terraform applyを実行します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Outputs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vpc_id = vpc-XXXXXXXXXXXXXXXXX
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>正常に実行されるとこのようにVPCのIDを確認することができます。&lt;br>
+これでVPCのモジュールは完成です。&lt;br>
+作成したリソースが不要になったら以下のコマンドで消してくださいね。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform destroy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="次回">次回
+&lt;/h2>&lt;p>VPCを作成したので次はサブネットの作成を行います。&lt;br>
+また後日記事にまとめるのでお楽しみにー！！&lt;/p></description></item><item><title>ブログを開設しました！</title><link>https://nezumisannn.io/blog/first-post/</link><pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/first-post/</guid><description>&lt;img src="https://nezumisannn.io/blog/first-post/cover.jpg" alt="Featured image of post ブログを開設しました！" />&lt;p>みなさんこんにちは！&lt;br>
+インフラエンジニアのねずみさん家です。&lt;br>
+突然ですがブログを開設しました。ねずみさん家。の日常です(笑)&lt;/p>
+&lt;p>このブログは「Hugo」と「Github Pages」で稼働しています。&lt;br>
+WordPressが最初に頭に思い浮かびましたが&lt;br>
+コンテンツとして自己紹介とブログ記事しかない小規模なサイトなので&lt;br>
+「別に動的コンテンツじゃなくてもいいじゃん！」ということで勢いで作りました（&lt;/p>
+&lt;h2 id="このブログで書くこと">このブログで書くこと
+&lt;/h2>&lt;ul>
+&lt;li>学習したスキル&lt;/li>
+&lt;li>技術的に躓いたこと&lt;/li>
+&lt;li>勉強会・セミナーの参加レポート&lt;/li>
+&lt;li>プライベートの日常&lt;/li>
+&lt;/ul>
+&lt;p>などなど、私自身が書きたいことを徐々に書いていきたいと思います！&lt;br>
+Twitterで記事を随時宣伝していくつもりなので気になった方は是非ご覧ください！&lt;/p>
+&lt;h2 id="ブログを開設した訳">ブログを開設した訳
+&lt;/h2>&lt;p>唐突に何故ブログを開設したのかをまとめておくと&lt;br>
+「所属企業とは別で、個人としてのアウトプットを行っていきたい」と思ったからです。&lt;/p>
+&lt;p>各個人で意見は異なると思いますが、私自身が仕事をする上で&lt;br>
+「どの企業に属しているか」よりも「個人としてどんなスキルを持っていて何が出来るのか」&lt;br>
+ということの方が重視されていると強く感じています。&lt;br>
+「学歴とか過去の経歴」が当てにならない時代になってきているのではないでしょうか。&lt;/p>
+&lt;p>そんな中で、「自分という個人」を売り込み市場価値を上げるにはどうすれば良いのか。&lt;br>
+そう考えたときに行き着いたのが「考えやスキルをブログでアウトプットする」ということでした。&lt;br>
+思ったより単純明快ですね(笑)&lt;/p>
+&lt;p>併せて、これは以前から既に実践しているのですが&lt;br>
+ブログ以外の活動として「勉強会やセミナーに登壇する」ということも続けています。&lt;br>
+登壇履歴はこちらから見れます！&lt;br>
+&lt;a class="link" href="https://github.com/nezumisannn/my-profile" target="_blank" rel="noopener"
+>https://github.com/nezumisannn/my-profile&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>勉強会やセミナーに登壇してアウトプットをすることで人脈を広げる&lt;/li>
+&lt;li>個人ブログで文章として発信する&lt;/li>
+&lt;/ul>
+&lt;p>この2点を今後継続することでアウトプットの頻度を上げていきたいと思います！&lt;/p></description></item></channel></rss>

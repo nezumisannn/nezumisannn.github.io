@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Packer on ねずみさん家。の日常</title><link>https://nezumisannn.io/tags/packer/</link><description>Recent content in Packer on ねずみさん家。の日常</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nezumisannn.io/tags/packer/index.xml" rel="self" type="application/rss+xml"/><item><title>PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる</title><link>https://nezumisannn.io/blog/packer-hcl2-sample/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/packer-hcl2-sample/</guid><description>&lt;img src="https://nezumisannn.io/blog/packer-hcl2-sample/cover.jpg" alt="Featured image of post PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる" />&lt;h2 id="記述したコード">記述したコード
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/nezumisannn/packer-hcl2-sample.git" target="_blank" rel="noopener"
+>https://github.com/nezumisannn/packer-hcl2-sample.git&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="packerとは">Packerとは
+&lt;/h2>&lt;ul>
+&lt;li>HashiCorpが開発しているCLIツール&lt;/li>
+&lt;li>マルチクラウドに対応したゴールデンイメージの作成ができる&lt;/li>
+&lt;li>設定ファイルの書式はJson or HCL2&lt;/li>
+&lt;li>バージョン1.5からHCL2に対応した&lt;/li>
+&lt;/ul>
+&lt;h2 id="参照">参照
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://packer.io/guides/hcl/" target="_blank" rel="noopener"
+>https://packer.io/guides/hcl/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://packer.io/docs/builders/docker.html" target="_blank" rel="noopener"
+>https://packer.io/docs/builders/docker.html&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://packer.io/docs/provisioners/shell.html" target="_blank" rel="noopener"
+>https://packer.io/docs/provisioners/shell.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="hcl2で記述するメリット">HCL2で記述するメリット
+&lt;/h2>&lt;ul>
+&lt;li>TerraformもHCL2で記述するため共通の書式を利用できる&lt;/li>
+&lt;li>設定ファイルを用途に合わせて分割できる&lt;/li>
+&lt;li>コードの途中でコメントを追加できる&lt;/li>
+&lt;/ul>
+&lt;h2 id="packerのバージョン">Packerのバージョン
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ packer version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Packer v1.5.5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="設定ファイル一覧">設定ファイル一覧
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">tree&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">README&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">md&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">├──&lt;/span> &lt;span class="n">sources&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">└──&lt;/span> &lt;span class="n">variable&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pkr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hcl&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="variablepkrhcl">variable.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>variableを利用してコード内で利用する変数を定義する&lt;/li>
+&lt;/ul>
+&lt;h3 id="sourcespkrhcl">sources.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>ビルド時に利用するイメージを利用する&lt;/li>
+&lt;li>Json形式で記述する際のBuildersに相当する&lt;/li>
+&lt;/ul>
+&lt;h3 id="buildpkrhcl">build.pkr.hcl
+&lt;/h3>&lt;ul>
+&lt;li>ビルドを行う際の処理を記述する&lt;/li>
+&lt;li>sourcesでsources.pkr.hclに書いた設定を複数読み込むことが可能&lt;/li>
+&lt;li>その他Jsonで記述する際と同様にprovisionerでShellの他、Ansibleなどと連携可能&lt;/li>
+&lt;/ul>
+&lt;h2 id="ファイル内容">ファイル内容
+&lt;/h2>&lt;h3 id="variablepkrhcl-1">variable.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;image_nginx&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;nginx:latest&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;image_php-fpm&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;php:7.3-fpm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="sourcespkrhcl-1">sources.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">/*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;image&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;nginx:latest&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;commit&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;nginx&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">commit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">/*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;image&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;php:7.3-fpm&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;commit&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;docker&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;php-fpm&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_php&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">fpm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">commit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="buildpkrhcl-1">build.pkr.hcl
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">build {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sources = [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;source.docker.nginx&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;source.docker.php-fpm&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> provisioner &amp;#34;shell&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inline = [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;hostname &amp;amp;&amp;amp; cat /etc/os-release&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="ビルド実行">ビルド実行
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ packer build ./
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="現時点での問題">現時点での問題
+&lt;/h2>&lt;ul>
+&lt;li>packer validateが使えない
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/hashicorp/packer/issues/8538" target="_blank" rel="noopener"
+>https://github.com/hashicorp/packer/issues/8538&lt;/a>&lt;/li>
+&lt;li>今後のアップデートに期待&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>

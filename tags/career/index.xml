@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Career on ねずみさん家。の日常</title><link>https://nezumisannn.io/tags/career/</link><description>Recent content in Career on ねずみさん家。の日常</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://nezumisannn.io/tags/career/index.xml" rel="self" type="application/rss+xml"/><item><title>GROWTH ARCHITECT(グロースアーキテクト)というポジションを考えてみた</title><link>https://nezumisannn.io/blog/growth-architect/</link><pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/growth-architect/</guid><description>&lt;img src="https://nezumisannn.io/blog/growth-architect/cover.jpg" alt="Featured image of post GROWTH ARCHITECT(グロースアーキテクト)というポジションを考えてみた" />&lt;h2 id="概要">概要
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームを中長期的に成長させていくことを目的とした新しいポジション&lt;/li>
+&lt;/ul>
+&lt;h2 id="責任">責任
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームの生産性向上と成長の最大化&lt;/li>
+&lt;/ul>
+&lt;h2 id="目標">目標
+&lt;/h2>&lt;ul>
+&lt;li>エンジニアリングチームのオートスケーリング&lt;/li>
+&lt;li>組織のビジネスに対する間接的な貢献&lt;/li>
+&lt;/ul>
+&lt;h2 id="成長の定義">成長の定義
+&lt;/h2>&lt;ul>
+&lt;li>以下の技術面・精神面の2つを継続してチーム及び個人で磨いていくことを「成長」とする
+&lt;ul>
+&lt;li>ビジネスの技術的要件を達成するために必要なスキルセット&lt;/li>
+&lt;li>困難な課題に直面した場合でも自走できるエンジニアマインド&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Growth Architectは上記成長を自責と捉えて支援していく役割を担う&lt;/li>
+&lt;/ul>
+&lt;h2 id="エンジニアリングチームの定義">エンジニアリングチームの定義
+&lt;/h2>&lt;ul>
+&lt;li>お客様やサービスと徹底的に向き合い、エンジニアリング領域における技術的なソリューションを提供する集団&lt;/li>
+&lt;li>Growth Architectは中立的な立場で物事を把握するため基本的にエンジニアリングチームには属さずに独立して活動する&lt;/li>
+&lt;li>ただし、エンジニアリングチームのリソースが不足している場合は積極的に支援する&lt;/li>
+&lt;li>トランプにおけるジョーカーのような役割を果たす&lt;/li>
+&lt;/ul>
+&lt;h2 id="現状の課題と理想">現状の課題と理想
+&lt;/h2>&lt;h3 id="課題">課題
+&lt;/h3>&lt;ul>
+&lt;li>組織のビジネスの成長とエンジニアリングチームの成長が反比例している
+&lt;ul>
+&lt;li>ビジネスの技術的要件がチームメンバーのスキルセットを超えている&lt;/li>
+&lt;li>新規案件の対応に追われるようになり、一定のスキルセットを持ったメンバーに負荷が集中する&lt;/li>
+&lt;li>現組織や業務における課題を改善していくための時間を確保できず技術的負債が増加する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="理想">理想
+&lt;/h3>&lt;ul>
+&lt;li>組織のビジネスの成長に応じてエンジニアリングチームもスケールアップできる
+&lt;ul>
+&lt;li>チームメンバーを増やすことも必要だが単に増やせば良いというわけではない&lt;/li>
+&lt;li>チームと個人が成長し、チームメンバー1人に対して対応できる課題の数と幅が増えていくことが理想&lt;/li>
+&lt;li>この対応できる課題の数と幅を継続的に増やしていくことをGrowth Architectでは「チューニング」と呼ぶ&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>一定のメンバーに集中した負荷を分散できる
+&lt;ul>
+&lt;li>負荷が集中しているということは業務が属人化しているということ&lt;/li>
+&lt;li>属人化は悪ではないが、過度な属人化はメンバーを疲弊させる&lt;/li>
+&lt;li>汎用的かつどのメンバーでも対応できる範疇の業務は自動化していくことが理想&lt;/li>
+&lt;li>Growth Architectでは業務の自動化や効率化の面における技術的な支援を行うことが求められる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>現組織や業務における課題に向き合い改善していくことができる
+&lt;ul>
+&lt;li>課題がない組織は存在しないが、エンジニアリングチームの成長が追いつかないため後回しになりがち&lt;/li>
+&lt;li>Growth Architectではエンジニアリングチームと連携し、現状の課題の把握やソリューションを提供する役割を担う&lt;/li>
+&lt;li>組織の事業継続において長年受け継がれてきたフローを変えていくことも厭わない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="具体的な業務内容">具体的な業務内容
+&lt;/h2>&lt;h3 id="育成">育成
+&lt;/h3>&lt;ul>
+&lt;li>エンジニアリングチームに属するメンバーの育成&lt;/li>
+&lt;li>メンバーとは以下の3つの節目において長期的に関わっていく
+&lt;ul>
+&lt;li>出会い
+&lt;ul>
+&lt;li>研修内容の決定&lt;/li>
+&lt;li>新人研修の実施とフォローアップ&lt;/li>
+&lt;li>未経験からエンジニアの卵になってもらう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>自立
+&lt;ul>
+&lt;li>エンジニアリングチームへの配属&lt;/li>
+&lt;li>OJTの実施と自身が持っているノウハウの継承&lt;/li>
+&lt;li>OJT実施後のフィードバック&lt;/li>
+&lt;li>自走できる経験を積ませて卵の殻を破ってもらう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>継承
+&lt;ul>
+&lt;li>Growth Architectからの継承ではない&lt;/li>
+&lt;li>自走できるようになったメンバーからさらにその後輩へノウハウを継承してもらう&lt;/li>
+&lt;li>Growth Architectの使命は自身をも超えていく人材を育成すること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="登壇">登壇
+&lt;/h3>&lt;ul>
+&lt;li>社内勉強会の定期的な開催&lt;/li>
+&lt;li>外部の勉強会やイベントへの積極的な登壇
+&lt;ul>
+&lt;li>組織のネームバリューの向上&lt;/li>
+&lt;li>Growth Architect自身の成長のため&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>上記の活動を行うことで、エンジニアリング組織において必要不可欠なアウトプットを行う新しい組織文化を形成する&lt;/li>
+&lt;/ul>
+&lt;h3 id="最新技術の検証及び導入">最新技術の検証及び導入
+&lt;/h3>&lt;ul>
+&lt;li>エンジニアリングチームのスキルセットを超えてしまっている技術領域の検証及び導入を支援する&lt;/li>
+&lt;li>組織のR＆DのRの部分を担い、エンジニアリングチームの業務に導入するための運用フローの確立と啓蒙活動を行う&lt;/li>
+&lt;/ul></description></item></channel></rss>

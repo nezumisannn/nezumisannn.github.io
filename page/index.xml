@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on ねずみさん家。の日常</title><link>https://nezumisannn.io/page/</link><description>Recent content in Pages on ねずみさん家。の日常</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nezumisannn.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://nezumisannn.io/about/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/about/</guid><description>&lt;h2 id="自己紹介">自己紹介
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-hcl" data-lang="hcl">&lt;span class="line">&lt;span class="cl">&lt;span class="k">resource&lt;/span> &lt;span class="s2">&amp;#34;my_profile&amp;#34; &amp;#34;nezumisannn&amp;#34;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n"> name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Yuki.Teraoka&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n"> nickname&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;ねずみさん家。&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n"> job&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Infra Engineer&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n"> favorite_skills&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Terraform&amp;#34;,&amp;#34;Packer&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="技術スタック">技術スタック
+&lt;/h2>&lt;ul>
+&lt;li>Amazon Web Services&lt;/li>
+&lt;li>Google Cloud Platform&lt;/li>
+&lt;li>Microsoft Azure&lt;/li>
+&lt;li>Alibaba Cloud&lt;/li>
+&lt;li>Oracle Cloud Infrastructure&lt;/li>
+&lt;li>IDCF Cloud&lt;/li>
+&lt;li>Golang&lt;/li>
+&lt;li>Terraform&lt;/li>
+&lt;li>Packer&lt;/li>
+&lt;li>Docker&lt;/li>
+&lt;li>Kubernetes&lt;/li>
+&lt;/ul>
+&lt;h2 id="資格">資格
+&lt;/h2>&lt;ul>
+&lt;li>ITパスポート試験&lt;/li>
+&lt;li>基本情報技術者試験&lt;/li>
+&lt;li>AWS Certified Solutions Architect - Associate&lt;/li>
+&lt;li>Google Cloud Professional Cloud Architect&lt;/li>
+&lt;/ul>
+&lt;h2 id="登壇lt履歴">登壇/LT履歴
+&lt;/h2>&lt;ul>
+&lt;li>2018/11/27
+&lt;ul>
+&lt;li>【大阪】SBクラウド社 主催セミナー 『訪日中国人インバウンドマーケティングを実践するためのクラウド活用セミナー』&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2018/12/07
+&lt;ul>
+&lt;li>【大阪】Alibaba Cloud in Osaka #3&lt;/li>
+&lt;li>&lt;a class="link" href="https://alieaters-osaka.connpass.com/event/104035/" target="_blank" rel="noopener"
+>https://alieaters-osaka.connpass.com/event/104035/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/02/01
+&lt;ul>
+&lt;li>実践者が語るリアルなマルチクラウド　～AWS、Azure、GCP、Oracle Cloud～&lt;/li>
+&lt;li>&lt;a class="link" href="https://oracleinnovation.connpass.com/event/113559/" target="_blank" rel="noopener"
+>https://oracleinnovation.connpass.com/event/113559/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/02/13
+&lt;ul>
+&lt;li>Mackerel UG 関西支部 Meetup #1&lt;/li>
+&lt;li>&lt;a class="link" href="https://mackerel-ug.connpass.com/event/114309/" target="_blank" rel="noopener"
+>https://mackerel-ug.connpass.com/event/114309/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/03/07
+&lt;ul>
+&lt;li>【大阪】Alibaba Cloud in Osaka #４「なんば初開催」「DataVハンズオン」&lt;/li>
+&lt;li>&lt;a class="link" href="https://alieaters-osaka.connpass.com/event/109647/" target="_blank" rel="noopener"
+>https://alieaters-osaka.connpass.com/event/109647/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/05/25
+&lt;ul>
+&lt;li>【京都】GCPUG Kyoto #2【GCP】&lt;/li>
+&lt;li>&lt;a class="link" href="https://gcpug-kyoto.connpass.com/event/128672/" target="_blank" rel="noopener"
+>https://gcpug-kyoto.connpass.com/event/128672/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/06/20
+&lt;ul>
+&lt;li>【大阪】GCPUG Osaka #10 ～ Multi-Cloud Day ～【3クラウド共催】&lt;/li>
+&lt;li>&lt;a class="link" href="https://gcpug-osaka.connpass.com/event/131501/" target="_blank" rel="noopener"
+>https://gcpug-osaka.connpass.com/event/131501/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/07/05
+&lt;ul>
+&lt;li>Cloud Native Kansai #04&lt;/li>
+&lt;li>&lt;a class="link" href="https://cnjp.connpass.com/event/132102/" target="_blank" rel="noopener"
+>https://cnjp.connpass.com/event/132102/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/07/31
+&lt;ul>
+&lt;li>Google Cloud Next ’19 in Tokyo&lt;/li>
+&lt;li>&lt;a class="link" href="https://cloud.withgoogle.com/next/tokyo/sessions?session=D1-1-OS2" target="_blank" rel="noopener"
+>https://cloud.withgoogle.com/next/tokyo/sessions?session=D1-1-OS2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/08/23
+&lt;ul>
+&lt;li>Docker Meetup Kansai #4 (19.08)&lt;/li>
+&lt;li>&lt;a class="link" href="https://dockerkansai.connpass.com/event/141875/" target="_blank" rel="noopener"
+>https://dockerkansai.connpass.com/event/141875/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/09/24
+&lt;ul>
+&lt;li>【大阪・梅田】Kubernetes Meetup Osaka #1&lt;/li>
+&lt;li>&lt;a class="link" href="https://k8sjp-osaka.connpass.com/event/138582/" target="_blank" rel="noopener"
+>https://k8sjp-osaka.connpass.com/event/138582/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/11/20
+&lt;ul>
+&lt;li>【初心者向け】Kubernetesをはじめよう！&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/152032/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/152032/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/01/29
+&lt;ul>
+&lt;li>ゼロからはじめるDocker入門【ビヨンド勉強会#22】&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/160565/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/160565/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/02/08
+&lt;ul>
+&lt;li>【奈良】GCPUG in Nara #5 【CODE for NARA共催】&lt;/li>
+&lt;li>&lt;a class="link" href="https://gcpug-nara.connpass.com/event/159820/" target="_blank" rel="noopener"
+>https://gcpug-nara.connpass.com/event/159820/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/02/12
+&lt;ul>
+&lt;li>【大阪】Alibaba Cloud in Osaka #6&lt;/li>
+&lt;li>&lt;a class="link" href="https://alieaters-osaka.connpass.com/event/163984/" target="_blank" rel="noopener"
+>https://alieaters-osaka.connpass.com/event/163984/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/05/22
+&lt;ul>
+&lt;li>リモートワークにおけるクラウド開発環境について&lt;/li>
+&lt;li>&lt;a class="link" href="https://fgdc.connpass.com/event/175659/" target="_blank" rel="noopener"
+>https://fgdc.connpass.com/event/175659/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/06/17
+&lt;ul>
+&lt;li>Terraformについて語る会【ビヨンド勉強会#24】&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/178525/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/178525/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/09/09
+&lt;ul>
+&lt;li>ゲーム基盤の移設は本当にメリットあるの！？【NHN TOAST 共催】&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/186078/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/186078/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/12/03
+&lt;ul>
+&lt;li>次世代ゲーム潮流シリーズ第二弾： 膨大なトラフィックを支え、データに新たな金脈を見出す基盤とは？&lt;/li>
+&lt;li>&lt;a class="link" href="https://peatix.com/event/1728172" target="_blank" rel="noopener"
+>https://peatix.com/event/1728172&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/01/22
+&lt;ul>
+&lt;li>アリババクラウドパートナーサミット2021&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.alibabacloud.com/ja/campaign/jp-partner-summit#J_9976414710" target="_blank" rel="noopener"
+>https://www.alibabacloud.com/ja/campaign/jp-partner-summit#J_9976414710&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/10/08
+&lt;ul>
+&lt;li>Cloud Native Database Meetup #2&lt;/li>
+&lt;li>&lt;a class="link" href="https://cndata.connpass.com/event/222535/" target="_blank" rel="noopener"
+>https://cndata.connpass.com/event/222535/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/10/14
+&lt;ul>
+&lt;li>Alibaba Cloud共催！Alibaba Cloud最新情報アップデート&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/225468/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/225468/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/11/18
+&lt;ul>
+&lt;li>MixLeap Study #68 - 各社事例に学ぶKubernetes運用&lt;/li>
+&lt;li>&lt;a class="link" href="https://yahoo-osaka.connpass.com/event/228555/" target="_blank" rel="noopener"
+>https://yahoo-osaka.connpass.com/event/228555/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2023/05/11
+&lt;ul>
+&lt;li>【大阪】AWS構築・開発の技術勉強会【リアル開催】&lt;/li>
+&lt;li>&lt;a class="link" href="https://beyondjapan.connpass.com/event/280427/" target="_blank" rel="noopener"
+>https://beyondjapan.connpass.com/event/280427/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="メディア掲載">メディア掲載
+&lt;/h2>&lt;ul>
+&lt;li>2019/02/12
+&lt;ul>
+&lt;li>目指すは長けたサービスの良いとこ取り！マルチクラウドに取り組む企業の“今”&lt;/li>
+&lt;li>&lt;a class="link" href="https://cloud.watch.impress.co.jp/docs/topic/special/1168301.html" target="_blank" rel="noopener"
+>https://cloud.watch.impress.co.jp/docs/topic/special/1168301.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2019/07/31
+&lt;ul>
+&lt;li>D1-1-OS2: Google Kubernetes Engine で実現するサーバー負荷テストサービス「Fukamill（フカミル）」の裏側をご紹介&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=IFnqRBPK7B8" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=IFnqRBPK7B8&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2020/09/15
+&lt;ul>
+&lt;li>事例から垣間見るゲーム基盤移設の舞台裏と安定稼働の秘訣【ビヨンド勉強会#27】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=TfkHSEtSQJM" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=TfkHSEtSQJM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/02/22
+&lt;ul>
+&lt;li>PackerでDockerイメージをビルドする1&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=_pSVbPsS7sM" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=_pSVbPsS7sM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/02/22
+&lt;ul>
+&lt;li>PackerでDockerイメージをビルドする2&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=psun7BKCKRY" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=psun7BKCKRY&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/06/15
+&lt;ul>
+&lt;li>【インフラ構築】Terraform Cloudを利用したGitOps CI/CDパイプライン【STEP1 概要編】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=yybL78u-5r8" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=yybL78u-5r8&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/08/03
+&lt;ul>
+&lt;li>【概要編】Terraform Cloudを活用したマルチクラウドオートメーション&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=vVMdtdTXjVI" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=vVMdtdTXjVI&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/08/09
+&lt;ul>
+&lt;li>【実践編】Terraform Cloudを活用したマルチクラウドオートメーション&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=pKb8nlp1HLY" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=pKb8nlp1HLY&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/08/23
+&lt;ul>
+&lt;li>【インフラ構築】Terraform Cloudを利用したGitOps CI/CDパイプライン【STEP2 実装編】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=3hPgXoN77pA" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=3hPgXoN77pA&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/10/08
+&lt;ul>
+&lt;li>Cloud Native Database Meetup #2&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=Reez-XoNbsE" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=Reez-XoNbsE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/10/22
+&lt;ul>
+&lt;li>「Alibaba Cloud Container Service for Kubernetesの概要」【ビヨンド勉強会#35】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=Tp3Y38h3CSo" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=Tp3Y38h3CSo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021/11/25
+&lt;ul>
+&lt;li>「GKEにおける高負荷時のPodとWorker Nodeの挙動について」ビヨンド 寺岡佑樹【MixLeap Study #68】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=xbKKb9YE4Q4" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=xbKKb9YE4Q4&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/02/04
+&lt;ul>
+&lt;li>インフラエンジニアを徹底解説します！！仕事内容は？必要知識は？&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=lVtWjfJfaFM" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=lVtWjfJfaFM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/03/07
+&lt;ul>
+&lt;li>ハードウェア・ソフトウェアってなに？｜現役エンジニアがわかりやすく解説します！&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=QqXmnQcRX1g" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=QqXmnQcRX1g&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/03/14
+&lt;ul>
+&lt;li>Apache・Nginx・ミドルウェアってなに？｜現役エンジニアがわかりやすく解説します&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=fG0H4CN1woA" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=fG0H4CN1woA&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/04/25
+&lt;ul>
+&lt;li>【新人研修】ITベンチャーのエンジニアの研修内容を紹介します！&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=BAAUievFtIU" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=BAAUievFtIU&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/07/28
+&lt;ul>
+&lt;li>【AWS Fargate 概要編】現役エンジニアがポイントを解説します！【コンテナ】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=cDTDq19zrfE" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=cDTDq19zrfE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/08/11
+&lt;ul>
+&lt;li>クラウドとは【現役エンジニアが徹底解説！】| IT入門編&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=kIYKpNmyiFI" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=kIYKpNmyiFI&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/08/25
+&lt;ul>
+&lt;li>【入門】インフラ構築 コード化ツール「Terraform」概要編 ①&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=RhuUHDS_yKc" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=RhuUHDS_yKc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/09/08
+&lt;ul>
+&lt;li>【入門】インフラ構築 コード化ツール「Terraform」概要編 ②&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=Z-gqIY574gE" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=Z-gqIY574gE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/09/29
+&lt;ul>
+&lt;li>【入門】インフラ構築 コード化ツール「Terraform」概要編 ③&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=SCuHVQPesZI" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=SCuHVQPesZI&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/10/13
+&lt;ul>
+&lt;li>【密着】インフラエンジニア の一日【大阪】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=aDIoLB8xIzE" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=aDIoLB8xIzE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/11/25
+&lt;ul>
+&lt;li>【現役エンジニア解説】CDK for Terraform 概要と特徴&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=Uj6Gi3r0ypc" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=Uj6Gi3r0ypc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022/12/16
+&lt;ul>
+&lt;li>【AWS Fargate 実践編】Laravel の環境構築について現役エンジニアが解説！&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=yy8LeQcfsYc" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=yy8LeQcfsYc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2023/03/07
+&lt;ul>
+&lt;li>うちの社員をもう一度面接してみた。【新卒採用編】&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=ULyPRl9Z048" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=ULyPRl9Z048&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Archives</title><link>https://nezumisannn.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/archives/</guid><description/></item><item><title>Links</title><link>https://nezumisannn.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/links/</guid><description/></item><item><title>Search</title><link>https://nezumisannn.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/search/</guid><description/></item></channel></rss>

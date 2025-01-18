@@ -1,0 +1,204 @@
+<!doctype html><html lang=ja dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="TerraformでAWSのVPCを作成してみます"><title>TERRAFORMのMODULEを作成する(VPC)</title>
+<link rel=canonical href=https://nezumisannn.io/blog/terraform-module-vpc/><link rel=stylesheet href=/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css><meta property='og:title' content="TERRAFORMのMODULEを作成する(VPC)"><meta property='og:description' content="TerraformでAWSのVPCを作成してみます"><meta property='og:url' content='https://nezumisannn.io/blog/terraform-module-vpc/'><meta property='og:site_name' content='ねずみさん家。の日常'><meta property='og:type' content='article'><meta property='article:section' content='Blog'><meta property='article:tag' content='Terraform'><meta property='article:published_time' content='2019-12-14T00:00:00+00:00'><meta property='article:modified_time' content='2019-12-14T00:00:00+00:00'><meta property='og:image' content='https://nezumisannn.io/blog/terraform-module-vpc/cover.jpg'><meta name=twitter:title content="TERRAFORMのMODULEを作成する(VPC)"><meta name=twitter:description content="TerraformでAWSのVPCを作成してみます"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://nezumisannn.io/blog/terraform-module-vpc/cover.jpg'></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/avatar_hu17297871874963441493.png width=300 height=274 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>ねずみさん家。の日常</a></h1><h2 class=site-description>技術的な内容から日常まで。
+思ったこと感じたことを書いていきます。</h2></div></header><ol class=menu-social><li><a href=https://github.com/nezumisannn target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com/yktr_sre target=_blank title=Twitter rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Links</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#terraformのインストール>Terraformのインストール</a></li><li><a href=#クレデンシャルの用意>クレデンシャルの用意</a></li><li><a href=#hclの記述>HCLの記述</a></li><li><a href=#次回>次回</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/blog/terraform-module-vpc/><img src=/blog/terraform-module-vpc/cover_hu13459586684579990428.jpg srcset="/blog/terraform-module-vpc/cover_hu13459586684579990428.jpg 800w, /blog/terraform-module-vpc/cover_hu3425483315149503896.jpg 1600w" width=800 height=534 loading=lazy alt="Featured image of post TERRAFORMのMODULEを作成する(VPC)"></a></div><div class=article-details><header class=article-category><a href=/categories/iac/ style=background-color:#6495ed;color:#fff>IaC</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/blog/terraform-module-vpc/>TERRAFORMのMODULEを作成する(VPC)</a></h2><h3 class=article-subtitle>TerraformでAWSのVPCを作成してみます</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 14, 2019</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>3 minute read</time></div></footer></div></header><section class=article-content><p>みなさんこんにちは！<br>インフラエンジニアのねずみさん家です。</p><p>今回はTerraformのModuleを作成してAWSのVPCを作成します。<br>初めての投稿なので初回セットアップの部分も書いてみたいと思います。<br>Terraformは非常に便利なツールなので是非利用してみてくださいー。</p><h2 id=terraformのインストール>Terraformのインストール</h2><p>Macを利用していてbrewが利用できる方は以下でインストール可能です。</p><pre><code>brew install terraform
+</code></pre><p>TerraformはGolangで開発されているため<br><a class=link href=https://www.terraform.io/downloads.html target=_blank rel=noopener><strong>こちらから</strong></a>バイナリファイルをダウンロードすることも可能です。</p><p>インストールできたらバージョンを確認してみましょう。</p><pre><code>terraform version
+</code></pre><p>今回はバージョン0.12.18を利用します。<br>古いバージョンの0.11ではサポートされていない記述も含まれているためご注意ください。</p><h2 id=クレデンシャルの用意>クレデンシャルの用意</h2><p>Terraformの処理でAWSのAPIを実行することになるためクレデンシャルを用意します。<br>用意したらTerraformから読み込むために環境変数に登録します。<br>変数名の頭にTF_VARとつけることでTerraformから読み込むことができるようになります。</p><pre><code>export TF_VAR_access_key=[Access Key]
+export TF_VAR_secret_key=[Secret Key]
+export TF_VAR_role_arn=[Role ARN]
+</code></pre><p>terraform.tfvarsに記載しても良いですが<br>Gitに誤って上げてしまって不正アクセスを受けたという記事が散見されるため<br>基本的にはファイルに直接認証情報を記載しないのが良いと思います。</p><p>また今回はTerraformからAssumeRoleを行うため<br>適切な権限を付与したIAMロールも用意しておきます。</p><h2 id=hclの記述>HCLの記述</h2><p>ここからHCLを記載していきます。<br>HCLはHashicorp Configuration Languageの略で<br>Terraformのコードを書いていくときに利用する独自言語を指します。</p><p>今回記載したVPCのモジュールの階層構造は以下のようになっています。</p><pre><code>.
+├── network
+│   └── vpc
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── network.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+└── variables.tf
+</code></pre><p>tfstateをローカルで管理していますが<br>実際に使う場合はbackendでS3などで管理するようにするのが定石です。</p><p>まずはprovider.tfを書いていきましょう。</p><pre><code>provider &quot;aws&quot; {
+  access_key = var.access_key
+  secret_key = var.secret_key
+  region     = var.region
+
+  assume_role {
+    role_arn = var.role_arn
+  }
+}
+</code></pre><p>providerではAWSにアクセスするために必要な認証情報を指定します。<br>Terraformではvariableで変数を定義してvar.変数名で変数の値を取得することが可能です。<br>variables.tfの中身を見てみましょう。</p><pre><code>variable &quot;access_key&quot; {
+  description = &quot;AWS Access Key&quot;
+}
+
+variable &quot;secret_key&quot; {
+  description = &quot;AWS Secret Key&quot;
+}
+
+variable &quot;role_arn&quot; {
+  description = &quot;AWS Role ARN for Assume Role&quot;
+}
+
+variable &quot;region&quot; {
+  description = &quot;AWS Region&quot;
+  default     = &quot;ap-northeast-1&quot;
+}
+</code></pre><p>variableで変数を定義しています。<br>この変数には先ほど環境変数に指定した値が自動で代入されます。</p><p>ここまで書けたらいよいよVPCの作成部分を書いていきましょう。<br>network.tfの中身を見てみます。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>module &#34;vpc&#34; {
+</span></span><span class=line><span class=cl>  source = &#34;./network/vpc&#34;
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  vpc_config = {
+</span></span><span class=line><span class=cl>    name                 = &#34;example&#34;
+</span></span><span class=line><span class=cl>    cidr_block           = &#34;10.0.0.0/16&#34;
+</span></span><span class=line><span class=cl>    enable_dns_support   = true
+</span></span><span class=line><span class=cl>    enable_dns_hostnames = true
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>sourceに読み込むModuleの処理を記載した.tfが存在するディレクトリの相対パスを記載します。<br>また、Module側で必要な値を変数化するため<br>vpc_configという名前で変数を作成してModule側に渡しています。</p><p>Module側を見ていきます、まずはvariables.tfから見ていきましょう。<br>ここでnetwork.tfから渡された変数を受け取っています。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>variable</span> <span class=s2>&#34;vpc_config&#34;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>type</span> <span class=o>=</span> <span class=n>object</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>    <span class=n>name</span>                 <span class=o>=</span> <span class=n>string</span>
+</span></span><span class=line><span class=cl>    <span class=n>cidr_block</span>           <span class=o>=</span> <span class=n>string</span>
+</span></span><span class=line><span class=cl>    <span class=n>enable_dns_support</span>   <span class=o>=</span> <span class=ne>bool</span>
+</span></span><span class=line><span class=cl>    <span class=n>enable_dns_hostnames</span> <span class=o>=</span> <span class=ne>bool</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Terraform0.12からobjectという便利なタイプが追加されています。<br>0.11まではmap型でも同じ型の値しか格納することができませんでしたが<br>objectを利用するとstringとboolといった異なる型の値を同時に扱うことができます。</p><p>次にmain.tfを見ていきましょう。<br>ここでVPCを作成するためにaws_vpcリソースを記述しています。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>resource</span> <span class=s2>&#34;aws_vpc&#34;</span> <span class=s2>&#34;this&#34;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>cidr_block</span>           <span class=o>=</span> <span class=k>var</span><span class=o>.</span><span class=n>vpc_config</span><span class=o>.</span><span class=n>cidr_block</span>
+</span></span><span class=line><span class=cl>  <span class=n>enable_dns_support</span>   <span class=o>=</span> <span class=k>var</span><span class=o>.</span><span class=n>vpc_config</span><span class=o>.</span><span class=n>enable_dns_support</span>
+</span></span><span class=line><span class=cl>  <span class=n>enable_dns_hostnames</span> <span class=o>=</span> <span class=k>var</span><span class=o>.</span><span class=n>vpc_config</span><span class=o>.</span><span class=n>enable_dns_hostnames</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=n>tags</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Name</span> <span class=o>=</span> <span class=k>var</span><span class=o>.</span><span class=n>vpc_config</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>ここでも値が変数化されていますが<br>vpc_configという名前で呼び出し側から値を受け取っているため<br>var.変数名.オブジェクトキーというように指定すると値を参照することができます。</p><p>ここまでくればもう一息です。<br>最後にリソースが作成された後の情報を参照できるようにoutputを書いておきましょう。<br>outputs.tfを見ていきます。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>output &#34;vpc&#34; {
+</span></span><span class=line><span class=cl>  value = aws_vpc.this
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>ここも0.12から追加された記述を利用しています。<br>0.11までは1つのoutputに対して1つの値しか扱うことができませんでしたが<br>0.12からは複数の値を扱うことができるようになります。<br>aws_vpc.リソース名とするとvpc_idやcidr_blockなどの複数の値がmap型でまとめて出力されます。</p><p>ここまで書いたらVPCを作成することが可能です。
+まずはドライランを実行してみましょう。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>terraform plan
+</span></span></code></pre></td></tr></table></div></div><p>成功すると以下のように結果が返ってきます。<br>エラーが出た場合はHCLに記述ミスがある可能性があるので書き直しましょう。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Refreshing Terraform state in-memory prior to plan...
+</span></span><span class=line><span class=cl>The refreshed state will be used to calculate this plan, but will not be
+</span></span><span class=line><span class=cl>persisted to local or remote state storage.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>------------------------------------------------------------------------
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>An execution plan has been generated and is shown below.
+</span></span><span class=line><span class=cl>Resource actions are indicated with the following symbols:
+</span></span><span class=line><span class=cl>  + create
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Terraform will perform the following actions:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # module.vpc.aws_vpc.this will be created
+</span></span><span class=line><span class=cl>  + resource &#34;aws_vpc&#34; &#34;this&#34; {
+</span></span><span class=line><span class=cl>      + arn                              = (known after apply)
+</span></span><span class=line><span class=cl>      + assign_generated_ipv6_cidr_block = false
+</span></span><span class=line><span class=cl>      + cidr_block                       = &#34;10.0.0.0/16&#34;
+</span></span><span class=line><span class=cl>      + default_network_acl_id           = (known after apply)
+</span></span><span class=line><span class=cl>      + default_route_table_id           = (known after apply)
+</span></span><span class=line><span class=cl>      + default_security_group_id        = (known after apply)
+</span></span><span class=line><span class=cl>      + dhcp_options_id                  = (known after apply)
+</span></span><span class=line><span class=cl>      + enable_classiclink               = (known after apply)
+</span></span><span class=line><span class=cl>      + enable_classiclink_dns_support   = (known after apply)
+</span></span><span class=line><span class=cl>      + enable_dns_hostnames             = true
+</span></span><span class=line><span class=cl>      + enable_dns_support               = true
+</span></span><span class=line><span class=cl>      + id                               = (known after apply)
+</span></span><span class=line><span class=cl>      + instance_tenancy                 = &#34;default&#34;
+</span></span><span class=line><span class=cl>      + ipv6_association_id              = (known after apply)
+</span></span><span class=line><span class=cl>      + ipv6_cidr_block                  = (known after apply)
+</span></span></code></pre></td></tr></table></div></div><p>ドライランは問題ないようですので実際に反映してみましょう。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>terraform apply
+</span></span></code></pre></td></tr></table></div></div><p>反映されたら作成されたVPCの情報を参照したいため<br>Module側で指定したoutputを呼び出し側で受け取り内容を確認します。<br>呼び出し元のoutputs.tfを確認します。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>output &#34;vpc_id&#34; {
+</span></span><span class=line><span class=cl>  value = module.vpc.vpc.id
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>ここで記述するのはmodule.モジュール名.参照する値となり<br>今回はVPCのIDを確認したいためmodule.vpc.vpc.idとなります。<br>記述したら再度terraform applyを実行します。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Outputs:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>vpc_id = vpc-XXXXXXXXXXXXXXXXX
+</span></span></code></pre></td></tr></table></div></div><p>正常に実行されるとこのようにVPCのIDを確認することができます。<br>これでVPCのモジュールは完成です。<br>作成したリソースが不要になったら以下のコマンドで消してくださいね。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>terraform destroy
+</span></span></code></pre></td></tr></table></div></div><h2 id=次回>次回</h2><p>VPCを作成したので次はサブネットの作成を行います。<br>また後日記事にまとめるのでお楽しみにー！！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/terraform/>Terraform</a></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Last updated on Dec 14, 2019 00:00 UTC</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/blog/packer-hcl2-sample/><div class=article-image><img src=/blog/packer-hcl2-sample/cover.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg width=250 height=150 loading=lazy alt="Featured image of post PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる" data-key=packer-hcl2-sample data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ=="></div><div class=article-details><h2 class=article-title>PACKERがHCL2をサポートしたのでDOCKERイメージを作成してみる</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2019 -
+2025 ねずみさん家。の日常</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.29.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

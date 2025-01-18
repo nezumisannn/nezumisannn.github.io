@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Terraform on ねずみさん家。の日常</title><link>https://nezumisannn.io/tags/terraform/</link><description>Recent content in Terraform on ねずみさん家。の日常</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://nezumisannn.io/tags/terraform/index.xml" rel="self" type="application/rss+xml"/><item><title>TERRAFORMのMODULEを作成する(VPC)</title><link>https://nezumisannn.io/blog/terraform-module-vpc/</link><pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate><guid>https://nezumisannn.io/blog/terraform-module-vpc/</guid><description>&lt;img src="https://nezumisannn.io/blog/terraform-module-vpc/cover.jpg" alt="Featured image of post TERRAFORMのMODULEを作成する(VPC)" />&lt;p>みなさんこんにちは！&lt;br>
+インフラエンジニアのねずみさん家です。&lt;/p>
+&lt;p>今回はTerraformのModuleを作成してAWSのVPCを作成します。&lt;br>
+初めての投稿なので初回セットアップの部分も書いてみたいと思います。&lt;br>
+Terraformは非常に便利なツールなので是非利用してみてくださいー。&lt;/p>
+&lt;h2 id="terraformのインストール">Terraformのインストール
+&lt;/h2>&lt;p>Macを利用していてbrewが利用できる方は以下でインストール可能です。&lt;/p>
+&lt;pre>&lt;code>brew install terraform
+&lt;/code>&lt;/pre>
+&lt;p>TerraformはGolangで開発されているため&lt;br>
+&lt;a class="link" href="https://www.terraform.io/downloads.html" target="_blank" rel="noopener"
+>&lt;strong>こちらから&lt;/strong>&lt;/a>バイナリファイルをダウンロードすることも可能です。&lt;/p>
+&lt;p>インストールできたらバージョンを確認してみましょう。&lt;/p>
+&lt;pre>&lt;code>terraform version
+&lt;/code>&lt;/pre>
+&lt;p>今回はバージョン0.12.18を利用します。&lt;br>
+古いバージョンの0.11ではサポートされていない記述も含まれているためご注意ください。&lt;/p>
+&lt;h2 id="クレデンシャルの用意">クレデンシャルの用意
+&lt;/h2>&lt;p>Terraformの処理でAWSのAPIを実行することになるためクレデンシャルを用意します。&lt;br>
+用意したらTerraformから読み込むために環境変数に登録します。&lt;br>
+変数名の頭にTF_VARとつけることでTerraformから読み込むことができるようになります。&lt;/p>
+&lt;pre>&lt;code>export TF_VAR_access_key=[Access Key]
+export TF_VAR_secret_key=[Secret Key]
+export TF_VAR_role_arn=[Role ARN]
+&lt;/code>&lt;/pre>
+&lt;p>terraform.tfvarsに記載しても良いですが&lt;br>
+Gitに誤って上げてしまって不正アクセスを受けたという記事が散見されるため&lt;br>
+基本的にはファイルに直接認証情報を記載しないのが良いと思います。&lt;/p>
+&lt;p>また今回はTerraformからAssumeRoleを行うため&lt;br>
+適切な権限を付与したIAMロールも用意しておきます。&lt;/p>
+&lt;h2 id="hclの記述">HCLの記述
+&lt;/h2>&lt;p>ここからHCLを記載していきます。&lt;br>
+HCLはHashicorp Configuration Languageの略で&lt;br>
+Terraformのコードを書いていくときに利用する独自言語を指します。&lt;/p>
+&lt;p>今回記載したVPCのモジュールの階層構造は以下のようになっています。&lt;/p>
+&lt;pre>&lt;code>.
+├── network
+│ └── vpc
+│ ├── main.tf
+│ ├── outputs.tf
+│ └── variables.tf
+├── network.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+└── variables.tf
+&lt;/code>&lt;/pre>
+&lt;p>tfstateをローカルで管理していますが&lt;br>
+実際に使う場合はbackendでS3などで管理するようにするのが定石です。&lt;/p>
+&lt;p>まずはprovider.tfを書いていきましょう。&lt;/p>
+&lt;pre>&lt;code>provider &amp;quot;aws&amp;quot; {
+access_key = var.access_key
+secret_key = var.secret_key
+region = var.region
+assume_role {
+role_arn = var.role_arn
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>providerではAWSにアクセスするために必要な認証情報を指定します。&lt;br>
+Terraformではvariableで変数を定義してvar.変数名で変数の値を取得することが可能です。&lt;br>
+variables.tfの中身を見てみましょう。&lt;/p>
+&lt;pre>&lt;code>variable &amp;quot;access_key&amp;quot; {
+description = &amp;quot;AWS Access Key&amp;quot;
+}
+variable &amp;quot;secret_key&amp;quot; {
+description = &amp;quot;AWS Secret Key&amp;quot;
+}
+variable &amp;quot;role_arn&amp;quot; {
+description = &amp;quot;AWS Role ARN for Assume Role&amp;quot;
+}
+variable &amp;quot;region&amp;quot; {
+description = &amp;quot;AWS Region&amp;quot;
+default = &amp;quot;ap-northeast-1&amp;quot;
+}
+&lt;/code>&lt;/pre>
+&lt;p>variableで変数を定義しています。&lt;br>
+この変数には先ほど環境変数に指定した値が自動で代入されます。&lt;/p>
+&lt;p>ここまで書けたらいよいよVPCの作成部分を書いていきましょう。&lt;br>
+network.tfの中身を見てみます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">module &amp;#34;vpc&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> source = &amp;#34;./network/vpc&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vpc_config = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name = &amp;#34;example&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cidr_block = &amp;#34;10.0.0.0/16&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enable_dns_support = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enable_dns_hostnames = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>sourceに読み込むModuleの処理を記載した.tfが存在するディレクトリの相対パスを記載します。&lt;br>
+また、Module側で必要な値を変数化するため&lt;br>
+vpc_configという名前で変数を作成してModule側に渡しています。&lt;/p>
+&lt;p>Module側を見ていきます、まずはvariables.tfから見ていきましょう。&lt;br>
+ここでnetwork.tfから渡された変数を受け取っています。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">variable&lt;/span> &lt;span class="s2">&amp;#34;vpc_config&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">object&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cidr_block&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_support&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ne">bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_hostnames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ne">bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Terraform0.12からobjectという便利なタイプが追加されています。&lt;br>
+0.11まではmap型でも同じ型の値しか格納することができませんでしたが&lt;br>
+objectを利用するとstringとboolといった異なる型の値を同時に扱うことができます。&lt;/p>
+&lt;p>次にmain.tfを見ていきましょう。&lt;br>
+ここでVPCを作成するためにaws_vpcリソースを記述しています。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">resource&lt;/span> &lt;span class="s2">&amp;#34;aws_vpc&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;this&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cidr_block&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cidr_block&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_support&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enable_dns_support&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">enable_dns_hostnames&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enable_dns_hostnames&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tags&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">var&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vpc_config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここでも値が変数化されていますが&lt;br>
+vpc_configという名前で呼び出し側から値を受け取っているため&lt;br>
+var.変数名.オブジェクトキーというように指定すると値を参照することができます。&lt;/p>
+&lt;p>ここまでくればもう一息です。&lt;br>
+最後にリソースが作成された後の情報を参照できるようにoutputを書いておきましょう。&lt;br>
+outputs.tfを見ていきます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">output &amp;#34;vpc&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> value = aws_vpc.this
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここも0.12から追加された記述を利用しています。&lt;br>
+0.11までは1つのoutputに対して1つの値しか扱うことができませんでしたが&lt;br>
+0.12からは複数の値を扱うことができるようになります。&lt;br>
+aws_vpc.リソース名とするとvpc_idやcidr_blockなどの複数の値がmap型でまとめて出力されます。&lt;/p>
+&lt;p>ここまで書いたらVPCを作成することが可能です。
+まずはドライランを実行してみましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform plan
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>成功すると以下のように結果が返ってきます。&lt;br>
+エラーが出た場合はHCLに記述ミスがある可能性があるので書き直しましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Refreshing Terraform state in-memory prior to plan...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The refreshed state will be used to calculate this plan, but will not be
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">persisted to local or remote state storage.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------------------------------------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">An execution plan has been generated and is shown below.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Resource actions are indicated with the following symbols:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + create
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Terraform will perform the following actions:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # module.vpc.aws_vpc.this will be created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + resource &amp;#34;aws_vpc&amp;#34; &amp;#34;this&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + arn = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + assign_generated_ipv6_cidr_block = false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + cidr_block = &amp;#34;10.0.0.0/16&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_network_acl_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_route_table_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + default_security_group_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + dhcp_options_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_classiclink = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_classiclink_dns_support = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_dns_hostnames = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + enable_dns_support = true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + instance_tenancy = &amp;#34;default&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + ipv6_association_id = (known after apply)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + ipv6_cidr_block = (known after apply)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ドライランは問題ないようですので実際に反映してみましょう。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform apply
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>反映されたら作成されたVPCの情報を参照したいため&lt;br>
+Module側で指定したoutputを呼び出し側で受け取り内容を確認します。&lt;br>
+呼び出し元のoutputs.tfを確認します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">output &amp;#34;vpc_id&amp;#34; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> value = module.vpc.vpc.id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ここで記述するのはmodule.モジュール名.参照する値となり&lt;br>
+今回はVPCのIDを確認したいためmodule.vpc.vpc.idとなります。&lt;br>
+記述したら再度terraform applyを実行します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Outputs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vpc_id = vpc-XXXXXXXXXXXXXXXXX
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>正常に実行されるとこのようにVPCのIDを確認することができます。&lt;br>
+これでVPCのモジュールは完成です。&lt;br>
+作成したリソースが不要になったら以下のコマンドで消してくださいね。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">terraform destroy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="次回">次回
+&lt;/h2>&lt;p>VPCを作成したので次はサブネットの作成を行います。&lt;br>
+また後日記事にまとめるのでお楽しみにー！！&lt;/p></description></item></channel></rss>
